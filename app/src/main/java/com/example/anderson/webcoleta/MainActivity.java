@@ -33,7 +33,7 @@ import java.util.ArrayList;
 
 //alterando o arquivo para testar commit e sincronozação
 
-// Alterando pra testar Dani alterando
+// Alterando pra testar Dani alterando - parte 2
 
 public class MainActivity extends AppCompatActivity {
 

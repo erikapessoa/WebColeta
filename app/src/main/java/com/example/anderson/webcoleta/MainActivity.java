@@ -31,6 +31,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
+//alterando o arquivo para testar commit e sincronozação
+
 public class MainActivity extends AppCompatActivity {
 
     private Gson mGson;

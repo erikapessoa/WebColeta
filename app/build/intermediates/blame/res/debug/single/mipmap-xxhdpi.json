@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\Dados\\__PosIot\\AndroidBasico\\Projeto\\WebColeta\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher_round.png",
+        "source": "D:\\Dados\\__PosIot\\AndroidBasico\\Projeto\\WebColeta\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\Dados\\__PosIot\\AndroidBasico\\Projeto\\WebColeta\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "D:\\Dados\\__PosIot\\AndroidBasico\\Projeto\\WebColeta\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Anderson\\AndroidStudioProjects\\WebColeta\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\Anderson\\AndroidStudioProjects\\WebColeta\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Anderson\\AndroidStudioProjects\\WebColeta\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher_round.png",
+        "source": "C:\\Users\\Anderson\\AndroidStudioProjects\\WebColeta\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    }
+]

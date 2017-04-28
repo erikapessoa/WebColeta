@@ -1,0 +1,148 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:2:1-41:12
+	package
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:3:5-45
+		INJECTED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:6:5-67
+MERGED from [com.google.android.gms:play-services-maps:8.3.0] C:\Users\erika\.android\build-cache\408d43fea913a29e9a287e583cc929ae227d548a\output\AndroidManifest.xml:21:5-66
+	android:name
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:6:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.gms:play-services-maps:8.3.0] C:\Users\erika\.android\build-cache\408d43fea913a29e9a287e583cc929ae227d548a\output\AndroidManifest.xml:20:5-78
+	android:name
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:7:22-76
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:8:5-98
+	android:name
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:8:22-95
+uses-permission#com.vogella.android.locationapi.maps.permission.MAPS_RECEIVE
+ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:9:5-100
+	android:name
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:9:22-97
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:10:5-81
+	android:name
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:10:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:11:22-76
+permission#br.com.dts.webservices.maps.permission.MAPS_RECEIVE
+ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:13:5-15:47
+	android:protectionLevel
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:15:9-44
+	android:name
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:14:9-75
+uses-feature#0x00020000
+ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:18:5-20:35
+MERGED from [com.google.android.gms:play-services-maps:8.3.0] C:\Users\erika\.android\build-cache\408d43fea913a29e9a287e583cc929ae227d548a\output\AndroidManifest.xml:22:5-24:33
+	android:glEsVersion
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:19:9-41
+	android:required
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:20:9-32
+application
+ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:24:5-39:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\erika\.android\build-cache\c3d28d997126aa8cdc2ad90b9988e483ba94a057\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\erika\.android\build-cache\b478cbf62c89deb3ae9c900b515bb53bc1a0c07d\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\erika\.android\build-cache\188ca9773a4d03f3be028d3a08f94ee8aae013e7\output\AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-location:8.3.0] C:\Users\erika\.android\build-cache\9d67b067a6faf4bb1cfe4d3ee857e57e18b5e494\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-maps:8.3.0] C:\Users\erika\.android\build-cache\408d43fea913a29e9a287e583cc929ae227d548a\output\AndroidManifest.xml:27:5-20
+MERGED from [com.google.maps.android:android-maps-utils:0.4] C:\Users\erika\.android\build-cache\b83115c800823564b5a03bbbf0f8a3a499c55298\output\AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.android.gms:play-services-appindexing:8.3.0] C:\Users\erika\.android\build-cache\ea06f6a3101dac61b988ca1c9cbcab97b00a4845\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.3.0] C:\Users\erika\.android\build-cache\2aebc055d9cd4d4ae14bc540fc5c9619effbd920\output\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\erika\.android\build-cache\bc3348445bbec9025145344271df9b3a9b13dbf2\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\erika\.android\build-cache\73008cb6ac869cd55def841a7f4ad636d535c8ec\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\erika\.android\build-cache\2fc86a3c2bf9f246e9b5bcc3ebfcfde84374c6d3\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\erika\.android\build-cache\002b31206d84f20662c496b835f348b623a56020\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\erika\.android\build-cache\37a763dd25fb7681f767c6d4c561bd3d9c32abd9\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\erika\.android\build-cache\c75ea8d946b1c0e2e82a0c7a3f62215e87723a14\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\erika\.android\build-cache\d9fde9b68a7b272059c4332b03d6dc8202a9c548\output\AndroidManifest.xml:9:5-20
+	android:label
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:27:9-41
+	android:supportsRtl
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:29:9-35
+	android:roundIcon
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:28:9-54
+	android:allowBackup
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:25:9-35
+	android:icon
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:26:9-43
+	android:theme
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:30:9-40
+activity#com.example.anderson.webcoleta.MainActivity
+ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:31:9-37:20
+	android:name
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:31:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:32:13-36:29
+action#android.intent.action.MAIN
+ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:33:17-69
+	android:name
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:33:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:35:17-77
+	android:name
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:35:27-74
+activity#com.example.anderson.webcoleta.GarbagePlaceDetailActivity
+ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:38:9-73
+	android:name
+		ADDED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml:38:19-61
+uses-sdk
+INJECTED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\erika\.android\build-cache\c3d28d997126aa8cdc2ad90b9988e483ba94a057\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\erika\.android\build-cache\b478cbf62c89deb3ae9c900b515bb53bc1a0c07d\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\erika\.android\build-cache\188ca9773a4d03f3be028d3a08f94ee8aae013e7\output\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-location:8.3.0] C:\Users\erika\.android\build-cache\9d67b067a6faf4bb1cfe4d3ee857e57e18b5e494\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-maps:8.3.0] C:\Users\erika\.android\build-cache\408d43fea913a29e9a287e583cc929ae227d548a\output\AndroidManifest.xml:26:5-42
+MERGED from [com.google.android.gms:play-services-base:8.3.0] C:\Users\erika\.android\build-cache\f50813583e0e750d6acb63ae6313d49fa5b65871\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.maps.android:android-maps-utils:0.4] C:\Users\erika\.android\build-cache\b83115c800823564b5a03bbbf0f8a3a499c55298\output\AndroidManifest.xml:5:5-43
+MERGED from [com.google.android.gms:play-services-appindexing:8.3.0] C:\Users\erika\.android\build-cache\ea06f6a3101dac61b988ca1c9cbcab97b00a4845\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.3.0] C:\Users\erika\.android\build-cache\2aebc055d9cd4d4ae14bc540fc5c9619effbd920\output\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\erika\.android\build-cache\bc3348445bbec9025145344271df9b3a9b13dbf2\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\erika\.android\build-cache\73008cb6ac869cd55def841a7f4ad636d535c8ec\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\erika\.android\build-cache\2fc86a3c2bf9f246e9b5bcc3ebfcfde84374c6d3\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\erika\.android\build-cache\002b31206d84f20662c496b835f348b623a56020\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\erika\.android\build-cache\37a763dd25fb7681f767c6d4c561bd3d9c32abd9\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\erika\.android\build-cache\c75ea8d946b1c0e2e82a0c7a3f62215e87723a14\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\erika\.android\build-cache\d9fde9b68a7b272059c4332b03d6dc8202a9c548\output\AndroidManifest.xml:5:5-7:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\erika\.android\build-cache\c3d28d997126aa8cdc2ad90b9988e483ba94a057\output\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\erika\.android\build-cache\c3d28d997126aa8cdc2ad90b9988e483ba94a057\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\erika\.android\build-cache\b478cbf62c89deb3ae9c900b515bb53bc1a0c07d\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\erika\.android\build-cache\188ca9773a4d03f3be028d3a08f94ee8aae013e7\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\erika\.android\build-cache\bc3348445bbec9025145344271df9b3a9b13dbf2\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\erika\.android\build-cache\73008cb6ac869cd55def841a7f4ad636d535c8ec\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\erika\.android\build-cache\2fc86a3c2bf9f246e9b5bcc3ebfcfde84374c6d3\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\erika\.android\build-cache\002b31206d84f20662c496b835f348b623a56020\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\erika\.android\build-cache\37a763dd25fb7681f767c6d4c561bd3d9c32abd9\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\erika\.android\build-cache\c75ea8d946b1c0e2e82a0c7a3f62215e87723a14\output\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\erika\.android\build-cache\c3d28d997126aa8cdc2ad90b9988e483ba94a057\output\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\erika\.android\build-cache\c3d28d997126aa8cdc2ad90b9988e483ba94a057\output\AndroidManifest.xml:26:9-47
+meta-data#com.google.android.gms.version
+ADDED from [com.google.maps.android:android-maps-utils:0.4] C:\Users\erika\.android\build-cache\b83115c800823564b5a03bbbf0f8a3a499c55298\output\AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.android.gms:play-services-basement:8.3.0] C:\Users\erika\.android\build-cache\2aebc055d9cd4d4ae14bc540fc5c9619effbd920\output\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.maps.android:android-maps-utils:0.4] C:\Users\erika\.android\build-cache\b83115c800823564b5a03bbbf0f8a3a499c55298\output\AndroidManifest.xml:10:13-66
+	android:name
+		ADDED from [com.google.maps.android:android-maps-utils:0.4] C:\Users\erika\.android\build-cache\b83115c800823564b5a03bbbf0f8a3a499c55298\output\AndroidManifest.xml:9:13-58

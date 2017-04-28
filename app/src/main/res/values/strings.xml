@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">WebColeta</string>
+    <string name="list_empty_text">Não foram encontrados pontos de coleta</string>
+    <string name="dialog_wait_title">Aguarde...</string>
+    <string name="dialog_wait_message">Carregando informações.</string>
+    <string name="connection_exception">Erro ao conectar ao servidor. Tente novamente mais tarde.</string>
+
+
+    <string name="list_header_text">Locais</string>
+
+    <plurals name="list_header_plural">
+        <item quantity="one">1 lugar</item>
+        <item quantity="other">%d lugares</item>
+    </plurals>
+
+    <string name="action_route">Traçar rota</string>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Anderson\.android\build-cache\0eb8f37a673d72a8b05c3054ed04a55794640512\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="345a1b5cf5b144ce18ba6962bc66a7e2f26c1c1b">
+        <dex dex="C:\Users\Anderson\AndroidStudioProjects\WebColeta\app\build\intermediates\pre-dexed\debug\classes_d8065b8133713abf3701a96a1cdeab3562594abe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Anderson\.android\build-cache\de0ac81743086c7b2108b0387b025c0076b82249\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="77f9593d979f4347344be233bd0d888315f79517">
+        <dex dex="C:\Users\Anderson\AndroidStudioProjects\WebColeta\app\build\intermediates\pre-dexed\debug\classes_bc824d016c1d37b537d1395e02b5d3f196d4cdbc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Anderson\.android\build-cache\7e7163c4aaa8d039eeb30e518cafc99e43525558\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="01a90bbb9495a8bbf6f3cfdf12f1b35caaa9524b">
+        <dex dex="C:\Users\Anderson\AndroidStudioProjects\WebColeta\app\build\intermediates\pre-dexed\debug\classes_751146753eccc3deb3db2e93d65d0c5256861fb1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="C:\Users\Anderson\AndroidStudioProjects\WebColeta\app\build\intermediates\pre-dexed\debug\gson-2.2.4_313aff129984a0a45e086871ec03bfcc02e7284e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Anderson\.android\build-cache\de419ffa012916a82b2d1d9a17e4cded2ba5def5\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b1a7fac58cc85b115adee653a10b6300f90951a">
+        <dex dex="C:\Users\Anderson\AndroidStudioProjects\WebColeta\app\build\intermediates\pre-dexed\debug\classes_409238c0be65dda4e5d4194826716d947d5a42be.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Anderson\.android\build-cache\f5fdf4ffa9806d8958e5ec6332ba16bb059d4eb6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0c3e81d3eb86b86d194b5cdb6a4de78203f6f7fd">
+        <dex dex="C:\Users\Anderson\AndroidStudioProjects\WebColeta\app\build\intermediates\pre-dexed\debug\classes_9342c057c270018917c225fe9db24d543a4c3972.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Anderson\.android\build-cache\7e8b352fb8341a29acbbe9e35325e6727574d6c5\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6d9ed9a288364688e7fcf6704776284dac1eb42e">
+        <dex dex="C:\Users\Anderson\AndroidStudioProjects\WebColeta\app\build\intermediates\pre-dexed\debug\classes_22407701f8f4176bd1937837264ad8f92fa34f6a.jar" />
+    </item>
+
+</items>

@@ -33,6 +33,8 @@ import java.util.ArrayList;
 
 //alterando o arquivo para testar commit e sincronozação
 
+// Alterando pra testar Dani alterando
+
 public class MainActivity extends AppCompatActivity {
 
     private Gson mGson;

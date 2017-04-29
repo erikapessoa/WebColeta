@@ -2,32 +2,46 @@ package com.example.anderson.webcoleta;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.anderson.webcoleta.app.App;
 import com.example.anderson.webcoleta.model.GarbagePlace;
 import com.example.anderson.webcoleta.util.ListGarbage;
 import com.example.anderson.webcoleta.util.Manifest;
+import com.example.anderson.webcoleta.util.PermissionUtils;
+import com.google.android.gms.location.places.AddPlaceRequest;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class GarbagePlaceDetailActivity extends AppCompatActivity {
+import java.io.IOException;
+import java.util.List;
+
+public class GarbagePlaceDetailActivity extends AppCompatActivity {//} implements OnMapReadyCallback, GoogleMap.OnMyLocationButtonClickListener, ActivityCompat.OnRequestPermissionsResultCallback{
 
     public static final int MY_PERMISSIONS_REQUEST_ACCESS_MAP = 1;
-
+    private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     public static final String EXTRA_PLACE_ROUTE = "garbage_place_route";
     private TextView mTextName;
     private TextView mTextDetail;
+    private boolean mPermissionDenied = false;
+
 
     private GoogleMap mMap;
 
@@ -47,33 +61,89 @@ public class GarbagePlaceDetailActivity extends AppCompatActivity {
 
 
         if (mGarbagePlace != null){
-            mTextName.setText(mGarbagePlace.getProperties().getEndereco());
-            mTextDetail.setText(mGarbagePlace.getProperties().getTurno());
+            mTextName.setText(mGarbagePlace.getEndereco());
+            mTextDetail.setText(mGarbagePlace.getTurno());
 
         }
     }
+
+
+    //comentar daqui até o final
+
 /*
+
     private void setupMap(){
 
-
-
-        mMap = ((MapFragment)getFragmentManager().findFragmentById(R.id.mapview)).getMap();
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.mapview);
+        mapFragment.getMapAsync(this);
 
         mMap.getUiSettings().setMyLocationButtonEnabled(false);
         mMap.setMyLocationEnabled(true);
 
-        double latitude = Double.parseDouble(mPlace.getGeometry().getCoordinates()[1]);
-        double longitude = Double.parseDouble(mPlace.getGeometry().getCoordinates()[0]);
+      //  double latitude = Double.parseDouble(mPlace.getGeometry().getCoordinates()[1]);
+      //  double longitude = Double.parseDouble(mPlace.getGeometry().getCoordinates()[0]);
 
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(latitude, longitude))
-                .title(mPlace.getProperties().getPTurist())
-                .snippet(mPlace.getProperties().getPTurist())
-        );
+        Geocoder geocoder = new Geocoder(this);
+        List<Address> addresses = null;
 
-        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), 10);
-        mMap.animateCamera(cameraUpdate);
+        try {
+            // Find a maximum of 3 locations with the name Kyoto
+            addresses = geocoder.getFromLocationName(mTextName.getText().toString() + "Recife, Pernambuco", 3);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if (addresses != null) {
+            for (Address loc : addresses) {
+                MarkerOptions opts = new MarkerOptions()
+                        .position(new LatLng(loc.getLatitude(), loc.getLongitude()))
+                        .title(loc.getAddressLine(0));
+
+                mMap.addMarker(opts);
+                CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(loc.getLatitude(), loc.getLongitude()), 10);
+                mMap.animateCamera(cameraUpdate);
+            }
+
+
+        }
+
+
     }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
+        //      mPerth = mMap.addMarker(new MarkerOptions().title("Perth"));
+        //      mPerth.setTag(0);
+        // Add a marker in Sydney and move the camera
+        mMap.setOnMyLocationButtonClickListener(this);
+
+        enableMyLocation();
+
+
+
+
+
+    }
+
+    private void enableMyLocation() {
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            // Permission to access the location is missing.
+            PermissionUtils.requestPermission(this, LOCATION_PERMISSION_REQUEST_CODE,
+                    android.Manifest.permission.ACCESS_FINE_LOCATION, true);
+        } else if (mMap != null) {
+            // Access to the location has been granted to the app.
+            mMap.setMyLocationEnabled(true);
+
+
+
+        }
+    }
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -122,6 +192,30 @@ public class GarbagePlaceDetailActivity extends AppCompatActivity {
                 return;
             }
         }
+
+
+    }
+
+    @Override
+    public boolean onMyLocationButtonClick() {
+        Toast.makeText(this, "MyLocation button clicked", Toast.LENGTH_SHORT).show();
+        // Return false so that we don't consume the event and the default behavior still occurs
+        // (the camera animates to the user's current position).
+        return false;
+    }
+    @Override
+    protected void onResumeFragments() {
+        super.onResumeFragments();
+        if (mPermissionDenied) {
+            // Permission was not granted, display error dialog.
+            showMissingPermissionError();
+            mPermissionDenied = false;
+        }
+    }
+
+    private void showMissingPermissionError() {
+        PermissionUtils.PermissionDeniedDialog
+                .newInstance(true).show(getSupportFragmentManager(), "dialog");
     }
 */
 }

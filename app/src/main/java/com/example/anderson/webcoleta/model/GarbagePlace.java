@@ -9,60 +9,75 @@ import java.io.Serializable;
 public class GarbagePlace implements Serializable {
 
     private String id;
+    //private String type;
 
-    private GarbagePlaceInfo properties;
+    private String mIntervalo;
+    private String mSetor;
+    private String Endereco;
+    private String Turno;
+    private String RotaSetor;
+    private String Frequencia;
+    private String Id;
 
-    private String type;
 
-   // private Geometry geometry;
+    public String getIntervalo ()
+    {
+        return this.mIntervalo;
+    }
+
+    public void setIntervalo (String Intervalo)
+    {
+        this.mIntervalo = Intervalo;
+    }
+
+    public String getSetor ()
+    {
+        return this.mSetor;
+    }
+
+    public void setSetor (String Setor)
+    {
+        this.mSetor = Setor;
+    }
 
     public String getId ()
     {
-        return id;
+        return Id;
     }
 
-    public void setId (String id)
+    public void setId (String Id)
     {
-        this.id = id;
+        this.Id = Id;
     }
 
-    public GarbagePlaceInfo getProperties ()
+    public String getEndereco ()
     {
-        return properties;
+        return this.Endereco;
     }
 
-    public void setProperties (GarbagePlaceInfo properties)
+    public void setEndereco (String Endereco)
     {
-        this.properties = properties;
+        this.Endereco = Endereco;
     }
 
-    public String getType ()
-    {
-        return type;
-    }
+    public String getTurno() { return  this.Turno; }
 
-    public void setType (String type)
-    {
-        this.type = type;
-    }
+    public void setTurno(String Turno) {this.Turno = Turno; }
 
-    /* public Geometry getGeometry ()
-    {
-        return geometry;
-    }
+    public String getRotaSetor() {return this.RotaSetor; }
 
-    public void setGeometry (Geometry geometry)
-    {
-        this.geometry = geometry;
-    }
-*/
+    public void setRotaSetor(String RotaSetor) {this.RotaSetor = RotaSetor; }
+
+    public String getFrequencia() {return this.Frequencia; }
+
+    public void setFrequencia(String Frequencia) {this.Frequencia = Frequencia; }
 
     @Override
     public String toString()
     {
-       // return "ClassPojo [id = "+id+", properties = "+properties+", type = "+type+", geometry = "+geometry+"]";
-        return "ClassPojo [id = "+id+", properties = "+properties+", type = "+type+"]";
-    }
+        return "ClassPojo [Intervalo = "+mIntervalo+", Setor = "+mSetor+", Id = "+Id+", Endereco = "+Endereco+
 
+                ", Turno = "+Turno+", RotaSetor = "+RotaSetor+", Frequencia = "+ Frequencia+"]";
+    }
 
 }

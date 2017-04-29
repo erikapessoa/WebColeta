@@ -52,7 +52,7 @@ public class GarbagePlacesAdapter extends BaseAdapter {
         }
 
         holder.imgLogo.setImageResource(R.drawable.garbage_icon);
-        holder.txtPlaceName.setText(garbagePlace.getProperties().getEndereco());
+        holder.txtPlaceName.setText(garbagePlace.getEndereco());
 
         return v;
 

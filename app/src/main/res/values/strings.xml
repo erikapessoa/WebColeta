@@ -4,7 +4,7 @@
     <string name="dialog_wait_title">Aguarde...</string>
     <string name="dialog_wait_message">Carregando informações.</string>
     <string name="connection_exception">Erro ao conectar ao servidor. Tente novamente mais tarde.</string>
-
+    <string name="permission_rationale_location">Access to the location service is required to demonstrate the \'my location\' feature, which shows your current location on the map.</string>
 
     <string name="list_header_text">Locais</string>
 
@@ -14,4 +14,6 @@
     </plurals>
 
     <string name="action_route">Traçar rota</string>
+
+
 </resources>

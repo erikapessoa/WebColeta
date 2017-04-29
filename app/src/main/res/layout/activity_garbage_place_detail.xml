@@ -8,6 +8,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:background="#008800"
+        android:text = "Sua coleta pode ser feita em: "/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/txt_garbage_place_name"/>
 
@@ -18,10 +25,12 @@
         android:textSize="15dp"
         android:id="@+id/txt_garbage_place_turno"/>
 
+    <!-- comentar daqui pra baixo
+
     <fragment
         android:id="@+id/mapview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        class="com.google.android.gms.maps.MapFragment" />
-
+         />
+-->
 </LinearLayout>

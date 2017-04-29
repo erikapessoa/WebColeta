@@ -1,29 +1,34 @@
 package com.example.anderson.webcoleta;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
-//import android.support.design.widget.Snackbar;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 
-public class MainActivity extends AppCompatActivity {
+import android.os.AsyncTask;
+import android.widget.TextView;
 
+import com.example.anderson.webcoleta.adapter.GarbagePlacesAdapter;
+import com.example.anderson.webcoleta.model.GarbagePlace;
+import com.example.anderson.webcoleta.util.LogWrapper;
+import com.example.anderson.webcoleta.util.Utils;
+import com.google.gson.Gson;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
 
-    }
+public class GarbagePlaceListActivity extends AppCompatActivity {
 
-    public void abrirMenu(View v) {
-
-        Intent it = new Intent(this, MenuActivity.class);
-        startActivity(it);
-
-    }
-
-/*
     private Gson mGson;
 
     private GarbagePlacesAdapter mGarbagePlacesAdapter;
@@ -57,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             mGson = new Gson(); // precisa da dependencia no gradle --> compile 'com.google.code.gson:gson:2.2.4'
 
-          //  PlaceGeosonList places;
+            //  PlaceGeosonList places;
 
             URL url = new URL(Utils.sURL);
 
@@ -83,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
                     String[] row = line.split(";");
                     count++;
-                   Log.i("Linha: ", row[0]);
+                    Log.i("Linha: ", row[0]);
                     if(count > 1) {
                         GarbagePlace mGarbagePlace = new GarbagePlace();
                         mGarbagePlace.setId(String.valueOf(count-1));
@@ -98,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 }
-              //  mGGL = new GarbagePlaceGeosonList();
+                //  mGGL = new GarbagePlaceGeosonList();
                 mGarbagePlacles = new GarbagePlace[ArrGPI.size()];
 
                 for(int i = 0; i< mGarbagePlacles.length; i++)
@@ -115,12 +120,12 @@ public class MainActivity extends AppCompatActivity {
 
             } else {
                 LogWrapper.log("Erro HTTP " + connection.getResponseCode());
-              //  Snackbar.make(mListPlaces, getString(R.string.connection_exception), Snackbar.LENGTH_LONG).show();
+                //  Snackbar.make(mListPlaces, getString(R.string.connection_exception), Snackbar.LENGTH_LONG).show();
             }
 
 
         } catch (IOException e) {
-           // Toast.makeText(ListPlacesActivity.this, R.string.connection_exception, Toast.LENGTH_LONG).show();
+            // Toast.makeText(ListPlacesActivity.this, R.string.connection_exception, Toast.LENGTH_LONG).show();
             //Snackbar.make(mListPlaces, getString(R.string.connection_exception), Snackbar.LENGTH_LONG).show();
             Log.i("Exceção: ", e.toString());
         }
@@ -141,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 GarbagePlace place = (GarbagePlace) adapterView.getItemAtPosition(i);
 
-                Intent it = new Intent(MainActivity.this, GarbagePlaceDetailActivity.class);
+                Intent it = new Intent(GarbagePlaceListActivity.this, GarbagePlaceDetailActivity.class);
                 it.putExtra(EXTRA_PLACE, place);
 
                 startActivity(it);
@@ -180,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             //Show progress while downloading data
-            mProgress = new ProgressDialog(MainActivity.this);
+            mProgress = new ProgressDialog(GarbagePlaceListActivity.this);
             mProgress.setTitle(R.string.dialog_wait_title);
             mProgress.setIcon(getDrawable(R.drawable.garbage_icon));
             mProgress.setMessage(getString(R.string.dialog_wait_message));
@@ -210,7 +215,4 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-
- */
-
 }

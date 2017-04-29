@@ -29,7 +29,7 @@ import java.util.ArrayList;
 
 public class GarbagePlaceListActivity extends AppCompatActivity {
 
-    private Gson mGson;
+
 
     private GarbagePlacesAdapter mGarbagePlacesAdapter;
 
@@ -48,7 +48,7 @@ public class GarbagePlaceListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_garbage_place_list);
 
         mListGarbagePlaces = (ListView)findViewById(R.id.list_garbage_places);
         mListGarbagePlaces.setEmptyView(findViewById(android.R.id.empty));
@@ -60,9 +60,6 @@ public class GarbagePlaceListActivity extends AppCompatActivity {
     private void loadData() {
 
         try {
-            mGson = new Gson(); // precisa da dependencia no gradle --> compile 'com.google.code.gson:gson:2.2.4'
-
-            //  PlaceGeosonList places;
 
             URL url = new URL(Utils.sURL);
 
@@ -88,7 +85,7 @@ public class GarbagePlaceListActivity extends AppCompatActivity {
 
                     String[] row = line.split(";");
                     count++;
-                    Log.i("Linha: ", row[0]);
+                   // Log.i("Linha: ", row[0]);
                     if(count > 1) {
                         GarbagePlace mGarbagePlace = new GarbagePlace();
                         mGarbagePlace.setId(String.valueOf(count-1));
@@ -99,7 +96,7 @@ public class GarbagePlaceListActivity extends AppCompatActivity {
                         mGarbagePlace.setRotaSetor(row[4]);
                         mGarbagePlace.setFrequencia(row[5]);
                         ArrGPI.add(mGarbagePlace);
-                        Log.i("Valor = ", String.valueOf(count));
+                      //  Log.i("Valor = ", String.valueOf(count));
                     }
 
                 }

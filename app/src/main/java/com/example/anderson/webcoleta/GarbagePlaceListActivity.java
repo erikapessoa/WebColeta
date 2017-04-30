@@ -19,6 +19,7 @@ import com.example.anderson.webcoleta.model.GarbagePlace;
 import com.example.anderson.webcoleta.util.GarbageConstants;
 import com.example.anderson.webcoleta.util.LogWrapper;
 import com.example.anderson.webcoleta.util.Utils;
+import com.example.anderson.webcoleta.util.WebService;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -57,75 +58,10 @@ public class GarbagePlaceListActivity extends AppCompatActivity {
     //Fazer essa função
     private void loadData() {
 
-        try {
+        WebService service = new WebService();
+        mGarbagePlacles = service.readGarbagePlaces();
 
-            URL url = new URL(Utils.sURL);
-
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setReadTimeout(10 * 1000);
-            connection.setConnectTimeout(15 * 1000);
-            connection.setRequestMethod("GET");
-            connection.setDoInput(true);
-            connection.setDoOutput(false);
-            connection.connect();
-
-            if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) { //conseguiu conectar
-
-
-
-                final BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-                String line="";
-
-                int count = 0;
-                while ((line = reader.readLine()) != null) {
-
-                    // "," ou ";" de acordo com o arquivo
-
-                    String[] row = line.split(";");
-                    count++;
-                   // Log.i("Linha: ", row[0]);
-                    if(count > 1) {
-                        GarbagePlace mGarbagePlace = new GarbagePlace();
-                        mGarbagePlace.setId(String.valueOf(count-1));
-                        mGarbagePlace.setIntervalo(row[0]);
-                        mGarbagePlace.setSetor(row[1]);
-                        mGarbagePlace.setEndereco(row[2]);
-                        mGarbagePlace.setTurno(row[3]);
-                        mGarbagePlace.setRotaSetor(row[4]);
-                        mGarbagePlace.setFrequencia(row[5]);
-                        ArrGPI.add(mGarbagePlace);
-                      //  Log.i("Valor = ", String.valueOf(count));
-                    }
-
-                }
-                //  mGGL = new GarbagePlaceGeosonList();
-                mGarbagePlacles = new GarbagePlace[ArrGPI.size()];
-
-                for(int i = 0; i< mGarbagePlacles.length; i++)
-                {
-                    mGarbagePlacles[i] = new GarbagePlace();
-                    mGarbagePlacles[i] = ArrGPI.get(i);
-                    mGarbagePlacles[i].setId(Integer.toString(i));
-                    //mGarbagePlacles[i].setType("GarbagePlace");
-
-                }
-
-
-
-
-            } else {
-                LogWrapper.log("Erro HTTP " + connection.getResponseCode());
-                //  Snackbar.make(mListPlaces, getString(R.string.connection_exception), Snackbar.LENGTH_LONG).show();
-            }
-
-
-        } catch (IOException e) {
-            // Toast.makeText(ListPlacesActivity.this, R.string.connection_exception, Toast.LENGTH_LONG).show();
-            //Snackbar.make(mListPlaces, getString(R.string.connection_exception), Snackbar.LENGTH_LONG).show();
-            Log.i("Exceção: ", e.toString());
-        }
     }
-
 
     private void setupListView() {
         //init adapter

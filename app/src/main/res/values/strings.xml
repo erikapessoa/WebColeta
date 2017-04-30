@@ -23,4 +23,16 @@
     <string name="gpd_button_register">Sim</string>
     <string name="gpd_button_cancel">Não</string>
 
+    <string name="title_register_notification">Registrar Notificação</string>
+
+    <string name="rn_text">Deseja ser avisado com quanto tempo de antecedência?</string>
+    <string name="rn_time_15">15 minutos</string>
+    <string name="rn_time_30">30 minutos</string>
+    <string name="rn_time_60">1 hora</string>
+    <string name="rn_button_ok">Registrar</string>
+    <string name="rn_button_cancel">Cancelar</string>
+
+
+
+
 </resources>

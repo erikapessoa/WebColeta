@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     private GarbagePlacesAdapter mGarbagePlacesAdapter;
 
-    public static final String EXTRA_PLACE = "place";
+    public static final String sEXTRA_PLACE = "place";
 
     private ListView mListGarbagePlaces;
 
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                 GarbagePlace place = (GarbagePlace) adapterView.getItemAtPosition(i);
 
                 Intent it = new Intent(MainActivity.this, GarbagePlaceDetailActivity.class);
-                it.putExtra(EXTRA_PLACE, place);
+                it.putExtra(sEXTRA_PLACE, place);
 
                 startActivity(it);
             }

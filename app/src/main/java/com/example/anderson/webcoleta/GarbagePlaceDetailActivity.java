@@ -1,74 +1,71 @@
 package com.example.anderson.webcoleta;
 
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.location.Address;
-import android.location.Geocoder;
-import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.anderson.webcoleta.app.App;
 import com.example.anderson.webcoleta.model.GarbagePlace;
-import com.example.anderson.webcoleta.util.ListGarbage;
-import com.example.anderson.webcoleta.util.Manifest;
-import com.example.anderson.webcoleta.util.PermissionUtils;
-import com.google.android.gms.location.places.AddPlaceRequest;
-import com.google.android.gms.maps.CameraUpdate;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
+import com.example.anderson.webcoleta.util.GarbageConstants;
 
-import java.io.IOException;
-import java.util.List;
 
 public class GarbagePlaceDetailActivity extends AppCompatActivity {//} implements OnMapReadyCallback, GoogleMap.OnMyLocationButtonClickListener, ActivityCompat.OnRequestPermissionsResultCallback{
 
-    public static final int MY_PERMISSIONS_REQUEST_ACCESS_MAP = 1;
-    private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
-    public static final String EXTRA_PLACE_ROUTE = "garbage_place_route";
-    private TextView mTextName;
-    private TextView mTextDetail;
-    private boolean mPermissionDenied = false;
 
 
-    private GoogleMap mMap;
-
+    private TextView mTextStreet;
+    private TextView mTextInterval;
+    private TextView mTextFrequency;
     private GarbagePlace mGarbagePlace;
+
+    //private boolean mPermissionDenied = false;
+    //private GoogleMap mMap;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_garbage_place_detail);
 
-        mGarbagePlace = (GarbagePlace) getIntent().getSerializableExtra(ListGarbage.EXTRA_PLACE);
+        mGarbagePlace = (GarbagePlace) getIntent().getSerializableExtra(GarbageConstants.sEXTRA_PLACE);
 
-        mTextName = (TextView) findViewById(R.id.txt_garbage_place_name);
-        mTextDetail = (TextView) findViewById(R.id.txt_garbage_place_turno);
-
-     //   checkPermission(); //fazer
-
+        mTextStreet = (TextView) findViewById(R.id.txt_garbage_place_street);
+        mTextInterval = (TextView) findViewById(R.id.txt_garbage_place_interval);
+        mTextFrequency = (TextView) findViewById(R.id.txt_garbage_place_frequency);
 
         if (mGarbagePlace != null){
-            mTextName.setText(mGarbagePlace.getEndereco());
-            mTextDetail.setText(mGarbagePlace.getTurno());
-
+            mTextStreet.setText(mGarbagePlace.getEndereco());
+            mTextInterval.setText(mGarbagePlace.getIntervalo());
+            mTextFrequency.setText(mGarbagePlace.getFrequencia());
         }
+
+        /* Verificar se este ponto de coleta está registrado para receber notificações, caso esteja,
+        exibir esta infrmação e permitir que ele descadastre o ponto. Caso não esteja, permitir que
+                ele cadastre o ponto. */
+
+
     }
 
+    public void registerGarbagePlaceNotification(View v) {
 
-    //comentar daqui até o final
+        Intent it = new Intent(GarbagePlaceDetailActivity.this, RegisterNotificationActivity.class);
+        it.putExtra(GarbageConstants.sEXTRA_PLACE, mGarbagePlace);
+
+        startActivity(it);
+    }
+
+    public void cancelGarbagePlaceNotification(View v) {
+
+        Intent it = new Intent(GarbagePlaceDetailActivity.this, GarbagePlaceListActivity.class);
+        startActivity(it);
+    }
+
+}
+
+
+//comentar daqui até o final
 
 /*
 
@@ -218,4 +215,3 @@ public class GarbagePlaceDetailActivity extends AppCompatActivity {//} implement
                 .newInstance(true).show(getSupportFragmentManager(), "dialog");
     }
 */
-}

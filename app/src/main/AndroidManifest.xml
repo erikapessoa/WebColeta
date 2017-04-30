@@ -33,7 +33,8 @@
         </activity>
         <activity android:name=".GarbagePlaceDetailActivity" />
         <activity android:name=".MenuActivity" />
-        <activity android:name=".GarbagePlaceListActivity"></activity>
+        <activity android:name=".GarbagePlaceListActivity" />
+        <activity android:name=".RegisterNotificationActivity"></activity>
     </application>
 
 </manifest>

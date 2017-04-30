@@ -1,8 +1,8 @@
 #Build
-idea/
-build/
+.idea/
 .gradle/
-gradle/
+build/
+app/build/
 
 
 # Windows image file caches
@@ -58,3 +58,5 @@ build/android-profile/profile-2017-04-28-10-58-49-688.rawproto
 .idea/workspace.xml
 *.rawproto
 .idea/workspace.xml
+.gradle/3.3/taskArtifacts/fileHashes.bin
+app/build/intermediates/blame/res/debug/multi/values-ka-rGE.json

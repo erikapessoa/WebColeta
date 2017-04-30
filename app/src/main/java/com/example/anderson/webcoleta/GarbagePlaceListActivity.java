@@ -16,9 +16,9 @@ import android.widget.TextView;
 
 import com.example.anderson.webcoleta.adapter.GarbagePlacesAdapter;
 import com.example.anderson.webcoleta.model.GarbagePlace;
+import com.example.anderson.webcoleta.util.GarbageConstants;
 import com.example.anderson.webcoleta.util.LogWrapper;
 import com.example.anderson.webcoleta.util.Utils;
-import com.google.gson.Gson;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,8 +32,6 @@ public class GarbagePlaceListActivity extends AppCompatActivity {
 
 
     private GarbagePlacesAdapter mGarbagePlacesAdapter;
-
-    public static final String EXTRA_PLACE = "place";
 
     private ListView mListGarbagePlaces;
 
@@ -144,7 +142,7 @@ public class GarbagePlaceListActivity extends AppCompatActivity {
                 GarbagePlace place = (GarbagePlace) adapterView.getItemAtPosition(i);
 
                 Intent it = new Intent(GarbagePlaceListActivity.this, GarbagePlaceDetailActivity.class);
-                it.putExtra(EXTRA_PLACE, place);
+                it.putExtra(GarbageConstants.sEXTRA_PLACE, place);
 
                 startActivity(it);
             }

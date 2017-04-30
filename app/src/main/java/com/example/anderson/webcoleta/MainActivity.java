@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         mListGarbagePlaces = (ListView)findViewById(R.id.list_garbage_places);
         mListGarbagePlaces.setEmptyView(findViewById(android.R.id.empty));
-        new SyncDataTask().execute();
+        new WebService().execute();
     }
 
 
@@ -175,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    private class SyncDataTask extends AsyncTask<Object, Object, Object> {
+    private class WebService extends AsyncTask<Object, Object, Object> {
 
         @Override
         protected void onPreExecute() {

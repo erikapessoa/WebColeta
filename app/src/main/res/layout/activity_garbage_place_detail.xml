@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:background="#008800"
-        android:text = "Sua coleta pode ser feita em: "/>
+        android:textColor="#FFFAFA"
+        android:background="#66CDAA"
+        android:textStyle="bold"
+        android:elegantTextHeight="true"
+        android:text = "Pontos de Coleta: "/>
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+       <!-- android:background="@drawable/base"-->
+
 
     <TextView
         android:layout_width="match_parent"
@@ -25,12 +37,17 @@
         android:textSize="15dp"
         android:id="@+id/txt_garbage_place_turno"/>
 
-    <!-- comentar daqui pra baixo
 
-    <fragment
-        android:id="@+id/mapview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-         />
--->
-</LinearLayout>
+
+
+
+
+        <!-- comentar daqui pra baixo
+
+        <fragment
+            android:id="@+id/mapview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             />
+    -->
+</RelativeLayout>

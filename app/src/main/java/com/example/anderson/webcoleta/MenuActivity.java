@@ -21,7 +21,7 @@ public class MenuActivity extends AppCompatActivity {
 
     public void buscarPontosColeta(View v) {
 
-        Intent it = new Intent(this, GarbagePlaceDetailActivity.class);
+        Intent it = new Intent(this, SearchActivity.class);
         startActivity(it);
     }
 

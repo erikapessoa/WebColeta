@@ -87,7 +87,7 @@ public class GarbagePlaceListActivity extends AppCompatActivity {
     private void addListFooter() {
         final int PADDING = 10;
         TextView txtHeader = new TextView(this);
-        txtHeader.setBackgroundColor(Color.BLUE);
+        txtHeader.setBackgroundColor(Color.GRAY);
         txtHeader.setTextColor(Color.WHITE);
         txtHeader.setText(R.string.list_header_text);
         txtHeader.setPadding(PADDING, PADDING, 0, PADDING);
@@ -102,7 +102,7 @@ public class GarbagePlaceListActivity extends AppCompatActivity {
                 R.plurals.list_header_plural,
                 mGarbagePlacesAdapter.getCount(),
                 mGarbagePlacesAdapter.getCount()));
-        txtFooter.setBackgroundColor(Color.BLUE);
+       // txtFooter.setBackgroundColor(Color.BLUE);
         txtFooter.setGravity(Gravity.LEFT);
         txtFooter.setPadding(0, PADDING, PADDING, PADDING);
         mListGarbagePlaces.addFooterView(txtFooter);

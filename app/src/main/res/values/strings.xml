@@ -14,8 +14,6 @@
         <item quantity="other">%d lugares</item>
     </plurals>
 
-    <string name="google_maps_key">AIzaSyDZfaNElJpjVWONnKNUf-i2FXYNQR5UKNY</string>
-
     <string name="title_garbage_place_detail">Detalhes do Ponto de Coleta</string>
 
     <string name="gpd_street">Nome da rua</string>

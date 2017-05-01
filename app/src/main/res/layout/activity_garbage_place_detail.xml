@@ -3,7 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:background="@drawable/planodefundo"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:weightSum="1">
+
+
+
 
     <TextView
         android:layout_width="match_parent"
@@ -15,57 +20,76 @@
         android:elegantTextHeight="true"
         android:text="@string/title_garbage_place_detail"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <!-- android:background="@drawable/base"-->
+    <!--  <ImageView
+          android:id="@+id/imageView"
+          android:layout_width="238dp"
+          android:layout_height="177dp"
+          android:background="@drawable/base" />
+  -->
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:id="@+id/txt_garbage_place_street"
+          android:text="@string/gpd_street"
+          android:textColor="@color/colorSnow"
+          />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/txt_garbage_place_street"
-        android:text="@string/gpd_street"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="15dp"
+          android:id="@+id/txt_garbage_place_interval"
+          android:textColor="@color/colorSnow"
+          android:text="@string/gpd_interval"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="15dp"
-        android:id="@+id/txt_garbage_place_interval"
-        android:text="@string/gpd_interval"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="15dp"
+          android:id="@+id/txt_garbage_place_frequency"
+          android:textColor="@color/colorSnow"
+          android:text="@string/gpd_frequency"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="15dp"
-        android:id="@+id/txt_garbage_place_frequency"
-        android:text="@string/gpd_frequency"/>
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="180dp"
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="15dp"
-        android:id="@+id/txt_garbage_place_register"
-        android:text="@string/gpd_register"/>
+  />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="30dp"
+          android:textColor="@color/colorSnow"
+          android:id="@+id/txt_garbage_place_register"
+          android:textAlignment="center"
+          android:textStyle="bold"
+          android:text="@string/gpd_register"/>
 
-        <Button
-            android:id="@+id/register_garbage_place_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/gpd_button_register"
-            android:onClick="registerGarbagePlaceNotification"/>
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="97dp">
 
-        <Button
-            android:id="@+id/cancel_garbage_place_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/gpd_button_cancel"
-            android:onClick="cancelGarbagePlaceNotification"/>
+          <Button
+              android:id="@+id/register_garbage_place_button"
+              android:layout_width="191dp"
+              android:layout_height="93dp"
+              android:background="@drawable/botao"
+              android:onClick="registerGarbagePlaceNotification"
+              android:text="@string/gpd_button_register"
+              android:textColor="@color/colorSnow" />
 
-    </LinearLayout>
+          <Button
+              android:id="@+id/cancel_garbage_place_button"
+              android:layout_width="wrap_content"
+              android:layout_height="99dp"
+              android:background="@drawable/botao"
+              android:onClick="cancelGarbagePlaceNotification"
+              android:text="@string/gpd_button_cancel"
+              android:textColor="@color/colorSnow" />
 
-</LinearLayout>
+      </LinearLayout>
+
+  </LinearLayout>

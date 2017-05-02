@@ -32,8 +32,8 @@
             android:textColor="@color/colorSnow"
             android:textStyle="bold"
             android:textSize="20dp"
-            android:text="@string/rn_time_15"
-            android:id="@+id/time_15"/>
+            android:text="@string/rn_time_1"
+            android:id="@+id/time_1"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,8 +41,8 @@
             android:textColor="@color/colorSnow"
             android:textStyle="bold"
             android:textSize="20dp"
-            android:text="@string/rn_time_30"
-            android:id="@+id/time_30"/>
+            android:text="@string/rn_time_2"
+            android:id="@+id/time_2"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,8 +50,8 @@
             android:textColor="@color/colorSnow"
             android:textStyle="bold"
             android:textSize="20dp"
-            android:text="@string/rn_time_60"
-            android:id="@+id/time_60"/>
+            android:text="@string/rn_time_3"
+            android:id="@+id/time_3"/>
     </RadioGroup>
 
     <LinearLayout
@@ -65,7 +65,7 @@
             android:text="Registrar"
             android:background="@drawable/botao"
             android:textColor="@color/colorSnow"
-            android:onClick="saveNotification"/>
+            android:onClick="savePreferences"/>
 
         <Button
             android:id="@+id/rn_cancel_button"

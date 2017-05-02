@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,15 +16,8 @@ import android.widget.TextView;
 import com.example.anderson.webcoleta.adapter.GarbagePlacesAdapter;
 import com.example.anderson.webcoleta.model.GarbagePlace;
 import com.example.anderson.webcoleta.util.GarbageConstants;
-import com.example.anderson.webcoleta.util.LogWrapper;
-import com.example.anderson.webcoleta.util.Utils;
 import com.example.anderson.webcoleta.util.WebService;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 
 public class GarbagePlaceListActivity extends AppCompatActivity {

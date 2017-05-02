@@ -49,7 +49,6 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-
         spinnerT = (Spinner)findViewById(R.id.spinner1);
         ArrayAdapter<String> adapterT = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, itensTurno);
         adapterT.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

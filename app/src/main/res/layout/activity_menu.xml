@@ -15,7 +15,6 @@
         android:layout_height="250dp"
         android:text="Lista"
         android:textColor="@color/colorSnow"
-
         android:textSize="40dp"
         android:onClick="listarPontosColeta"
         android:layout_alignParentTop="true"

@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.ListView;
 
 import android.os.AsyncTask;
@@ -52,6 +54,7 @@ public class GarbagePlaceListActivity extends AppCompatActivity {
         mListGarbagePlaces = (ListView)findViewById(R.id.list_garbage_places);
         mListGarbagePlaces.setEmptyView(findViewById(android.R.id.empty));
         new SyncDataTask().execute();
+
     }
 
 
@@ -71,6 +74,7 @@ public class GarbagePlaceListActivity extends AppCompatActivity {
 
         addListFooter(); // --> FAZER
         addListHeared();//  --> FAZER
+
 
         mListGarbagePlaces.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -108,7 +112,6 @@ public class GarbagePlaceListActivity extends AppCompatActivity {
         mListGarbagePlaces.addFooterView(txtFooter);
 
     }
-
 
 
     private class SyncDataTask extends AsyncTask<Object, Object, Object> {

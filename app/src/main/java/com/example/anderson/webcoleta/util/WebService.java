@@ -78,12 +78,14 @@ public class WebService  {
                 LogWrapper.log("Erro HTTP " + connection.getResponseCode());
                 //  Snackbar.make(mListPlaces, getString(R.string.connection_exception), Snackbar.LENGTH_LONG).show();
             }
+
         } catch (IOException e2) {
             // Toast.makeText(ListPlacesActivity.this, R.string.connection_exception, Toast.LENGTH_LONG).show();
             //Snackbar.make(mListPlaces, getString(R.string.connection_exception), Snackbar.LENGTH_LONG).show();
             mGarbagePlacles = null;
             Log.i("Exceção: ", e2.toString());
         }
+
 
         //retorna o array contendo todos os pontos de coleta
         return mGarbagePlacles;

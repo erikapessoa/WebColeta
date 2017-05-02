@@ -50,18 +50,20 @@ public class GarbagePlaceListActivity extends AppCompatActivity {
     }
 
 
+
+
     //Fazer essa função
     private void loadData() {
 
         WebService service = new WebService();
         mGarbagePlacles = service.readGarbagePlaces();
 
+
     }
 
     private void setupListView() {
         //init adapter
         mGarbagePlacesAdapter = new GarbagePlacesAdapter(this, mGarbagePlacles);
-
         mListGarbagePlaces.setAdapter(mGarbagePlacesAdapter);
 
         addListFooter(); // --> FAZER
@@ -79,7 +81,20 @@ public class GarbagePlaceListActivity extends AppCompatActivity {
                 startActivity(it);
             }
         });
+
+// para setar todos os GarbagePlaces serem true para autoCompTextView
+        for(GarbagePlace place : mGarbagePlacles) {
+            place.setAutoComp(true);
+        }
+
+        // Não pode ficar no OnCreat pq aqui é onde de fato a lista está populada
+        ArrayAdapter<GarbagePlace> adapterBusca = new ArrayAdapter<GarbagePlace>
+                (this, android.R.layout.simple_dropdown_item_1line, mGarbagePlacles);
+        AutoCompleteTextView busca = (AutoCompleteTextView) findViewById(R.id.pesquisa);
+        busca.setAdapter(adapterBusca);
     }
+
+
     private void addListFooter() {
         final int PADDING = 10;
         TextView txtHeader = new TextView(this);

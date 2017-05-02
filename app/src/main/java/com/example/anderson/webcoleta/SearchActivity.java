@@ -11,6 +11,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -36,12 +37,12 @@ public class SearchActivity extends AppCompatActivity {
 
     Spinner spinnerS;
     private static final String[] itensSetor = new String[] {
-            "Escolha um setor:", "A", "B", "C"
+            "6-02 A", "6-04 A", "6-10 A"
     };
 
     Spinner spinnerT;
     private static final String[] itensTurno = new String[] {
-            "Escolha um turno", "manhã", "tarde", "noite"
+            "manhã", "tarde", "noturno"
     };
 
     @Override
@@ -142,11 +143,43 @@ public class SearchActivity extends AppCompatActivity {
                 startActivity(it);
             }
         });
+
+
+        // para setar todos os GarbagePlaces serem true para autoCompTextView
+        for(GarbagePlace place : mGarbagePlacles) {
+            place.setAutoComp(true);
+        }
+
+        // Não pode ficar no OnCreat pq aqui é onde de fato a lista está populada
+        ArrayAdapter<GarbagePlace> adapterBusca = new ArrayAdapter<GarbagePlace>
+                (this, android.R.layout.simple_dropdown_item_1line, mGarbagePlacles);
+        AutoCompleteTextView busca = (AutoCompleteTextView) findViewById(R.id.pesquisa);
+        busca.setAdapter(adapterBusca);
+
+
+        // para pegar o item escolhido depois da filtro/busca
+        busca.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                GarbagePlace place = (GarbagePlace) adapterView.getItemAtPosition(i);
+
+                Intent it = new Intent(SearchActivity.this, GarbagePlaceDetailActivity.class);
+                it.putExtra(GarbageConstants.sEXTRA_PLACE, place);
+                startActivity(it);
+                //new GarbagePlaceListActivity.SyncDataTask().execute();
+            }
+        });
+
+
+
+
+
+
     }
     private void addListFooter() {
         final int PADDING = 10;
         TextView txtHeader = new TextView(this);
-        txtHeader.setBackgroundColor(Color.BLUE);
+        txtHeader.setBackgroundColor(Color.GRAY);
         txtHeader.setTextColor(Color.WHITE);
         txtHeader.setText(R.string.list_header_text);
         txtHeader.setPadding(PADDING, PADDING, 0, PADDING);

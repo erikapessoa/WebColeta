@@ -10,9 +10,10 @@
 
     <AutoCompleteTextView
         android:layout_width="match_parent"
-        android:layout_height="25pt"
-        android:id="@+id/pesquisa"
         android:background="@drawable/barrapesquisa"
+        android:paddingLeft="15pt"
+        android:layout_height="35pt"
+        android:id="@+id/pesquisa"
         android:completionThreshold="3"
         android:layout_alignParentTop="true"
         android:hint="Busque aqui o nome da rua"

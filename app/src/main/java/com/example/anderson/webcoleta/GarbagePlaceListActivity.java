@@ -22,6 +22,8 @@ import com.example.anderson.webcoleta.util.WebService;
 
 import java.util.ArrayList;
 
+import static android.media.CamcorderProfile.get;
+
 public class GarbagePlaceListActivity extends AppCompatActivity {
 
 
@@ -92,6 +94,22 @@ public class GarbagePlaceListActivity extends AppCompatActivity {
                 (this, android.R.layout.simple_dropdown_item_1line, mGarbagePlacles);
         AutoCompleteTextView busca = (AutoCompleteTextView) findViewById(R.id.pesquisa);
         busca.setAdapter(adapterBusca);
+
+
+          // para pegar o item escolhido depois da filtro/busca
+        busca.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                GarbagePlace place = (GarbagePlace) adapterView.getItemAtPosition(i);
+
+                Intent it = new Intent(GarbagePlaceListActivity.this, GarbagePlaceDetailActivity.class);
+                it.putExtra(GarbageConstants.sEXTRA_PLACE, place);
+                startActivity(it);
+                new SyncDataTask().execute();
+            }
+        });
+
+
     }
 
 

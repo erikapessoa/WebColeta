@@ -28,7 +28,7 @@ public class WebService  {
 
         try {
 
-            URL url = new URL(Utils.sURL);
+            URL url = new URL(GarbageConstants.sURL);
 
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setReadTimeout(10 * 1000);

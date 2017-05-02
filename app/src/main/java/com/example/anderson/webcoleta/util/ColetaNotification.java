@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.support.v7.app.NotificationCompat;
 
 import com.example.anderson.webcoleta.MainActivity;
+import com.example.anderson.webcoleta.NotificationActivity;
 
 /**
  * Created by erika on 02/05/2017.
@@ -51,7 +52,7 @@ public class ColetaNotification {
 
         stackBuilder = TaskStackBuilder.create(mContext);
 
-        stackBuilder.addParentStack(MainActivity.class);
+        stackBuilder.addParentStack(NotificationActivity.class);
 
         stackBuilder.addNextIntent(resultIntent);
         resultPendingIntent =

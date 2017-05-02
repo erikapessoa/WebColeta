@@ -29,4 +29,5 @@ public class GarbageConstants  {
     public static final String sKey_Frequency = "key_frequency_preference";
     public static final String sKey_Interval = "key_interval_preference";
 
+    public static final int sID_NOTIFICATION = 20170502;
 }

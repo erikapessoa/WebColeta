@@ -33,7 +33,13 @@
     <string name="rn_time_3">1 hora</string>
     <string name="rn_button_ok">Registrar</string>
     <string name="rn_button_cancel">Cancelar</string>
-
     <string name="rn_msg_sucess">Sua preferência foi salva com sucesso!</string>
+
+    <string name="title_notification">Aviso de Coleta</string>
+    <string name="n_message_1">O caminhão da coleta seletiva vai passar</string>
+    <string name="n_time_text">Em: </string>
+    <string name="n_minute_text">minutos. </string>
+    <string name="n_street_text">Na rua: </string>
+    <string name="n_message_2">A frequência do caminhão é: </string>
 
 </resources>

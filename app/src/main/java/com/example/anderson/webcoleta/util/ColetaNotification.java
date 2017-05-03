@@ -48,7 +48,7 @@ public class ColetaNotification {
                         .setContentText("Aviso de coleta");
 
         //Aqui eu preciso chamar minha Activity específica que vai exibir a tela com as informações
-        resultIntent = new Intent(mContext, MainActivity.class);
+        resultIntent = new Intent(mContext, NotificationActivity.class);
 
         stackBuilder = TaskStackBuilder.create(mContext);
 

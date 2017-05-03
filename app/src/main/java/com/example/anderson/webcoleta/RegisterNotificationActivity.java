@@ -19,7 +19,6 @@ import com.example.anderson.webcoleta.util.NotificationReceiver;
 import com.example.anderson.webcoleta.util.SavePreferences;
 
 import java.util.Calendar;
-import java.util.Date;
 
 public class RegisterNotificationActivity extends AppCompatActivity {
 
@@ -28,9 +27,6 @@ public class RegisterNotificationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_notification);
-
-
-
 
     }
 
@@ -53,9 +49,9 @@ public class RegisterNotificationActivity extends AppCompatActivity {
         //radioText = radio.getText().toString();
         radioId = mRadioGroup.indexOfChild(radio);
 
-        if(radioId == GarbageConstants.sTime_1)
+        if(radioId == 0)
             time = String.valueOf(GarbageConstants.sTime_1);
-        else if(radioId == GarbageConstants.sTime_2)
+        else if(radioId == 1)
             time = String.valueOf(GarbageConstants.sTime_2);
         else time = String.valueOf(GarbageConstants.sTime_3);
 
@@ -68,15 +64,9 @@ public class RegisterNotificationActivity extends AppCompatActivity {
         savePrefs.savePreference(GarbageConstants.sKey_Interval, place.getIntervalo());
 
         //registrando a notificação
-        //Data que a notificação será criada(por eqt um teste)
-        calendar = Calendar.getInstance();
-        calendar.set(Calendar.YEAR, 2017);
-        calendar.set(Calendar.MONTH, Calendar.JUNE);
-        calendar.set(Calendar.DAY_OF_MONTH, 15);
-        calendar.set(Calendar.HOUR, 15);
-        calendar.set(Calendar.MINUTE, 30);
-
-        notificationScheule(calendar);
+        //horário que a notificação será criada
+        calendar = createDate(place, time);
+        notificationSchedule(calendar);
 
         //mensagem para o usuário
         Toast.makeText(RegisterNotificationActivity.this, R.string.rn_msg_sucess, Toast.LENGTH_SHORT).show();
@@ -90,7 +80,7 @@ public class RegisterNotificationActivity extends AppCompatActivity {
         startActivity(it);
     }
 
-    private void notificationScheule(Calendar calendar) {
+    private void notificationSchedule(Calendar calendar) {
 
 
         AlarmManager alarmManager;
@@ -107,8 +97,48 @@ public class RegisterNotificationActivity extends AppCompatActivity {
         pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), GarbageConstants.sID_NOTIFICATION,
                 intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
-        // Regista o alerta no sistema.
-        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+        // Regista o alerta no sistema. Seta o intervalo (por eqt t setando para 15 minutos para poder testar
+        //depois precisa ver a frequencia para fazer o aviso
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
+                AlarmManager.INTERVAL_FIFTEEN_MINUTES, pendingIntent);
+    }
+
+    public Calendar createDate(GarbagePlace place, String timeBefore) {
+
+        String[] hourMinute;
+        Calendar calendar;
+        int tb, hour, minute;
+        String interval;
+        String frequency;
+
+        calendar =  Calendar.getInstance();
+        tb = -Integer.parseInt(timeBefore);
+        interval = place.getIntervalo();
+        //hourMinute = interval.split(":");
+        frequency = place.getFrequencia(); //ainda desconsiderando esta informação para fazer o agendamento
+
+        hour = Integer.parseInt(interval.substring(0,2));
+        minute = Integer.parseInt(interval.substring(3,5));
+
+        Log.i("RegisterActivity", "antecedencia: " + tb);
+
+        //para que o alarm comece a partir do dia seguinte
+        calendar.add(Calendar.DAY_OF_MONTH, 1);
+        calendar.set(Calendar.HOUR_OF_DAY, hour);
+        calendar.set(Calendar.MINUTE, minute);
+        //para que o alarme avise com a antecedência escolhida pelo usuário
+        calendar.add(Calendar.MINUTE, tb);
+
+        /*
+        Log.i("RegisterActivity", calendar.toString());
+        Log.i("RegisterActivity", "Mês=" + String.valueOf(calendar.get(Calendar.MONTH)));
+        Log.i("RegisterActivity", "Dia=" + String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)));
+        Log.i("RegisterActivity", "Hora=" + String.valueOf(calendar.get(Calendar.HOUR)));
+        Log.i("RegisterActivity", "Hora do dia =" + String.valueOf(calendar.get(Calendar.HOUR_OF_DAY)));
+        Log.i("RegisterActivity", "Minuto =" + String.valueOf(calendar.get(Calendar.MINUTE)));
+        */
+        return calendar;
+
     }
 
 

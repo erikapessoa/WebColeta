@@ -16,7 +16,7 @@
         android:id="@+id/pesquisa"
         android:completionThreshold="3"
         android:layout_alignParentTop="true"
-        android:hint="Busque aqui o nome da rua"
+        android:hint="@string/list_hint_text"
         />
 
     <ListView
@@ -33,9 +33,10 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:text="@string/list_empty_text"
-        android:layout_centerVertical="true"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textStyle="bold"
-        android:id="@android:id/empty"/>
+        android:id="@android:id/empty"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

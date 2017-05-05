@@ -61,6 +61,8 @@ public class GarbagePlaceDetailActivity extends AppCompatActivity implements OnM
             mTextFrequency.setText(mGarbagePlace.getFrequencia());
         }
 
+
+
         /* Verificar se este ponto de coleta está registrado para receber notificações, caso esteja,
         exibir esta infrmação e permitir que ele descadastre o ponto. Caso não esteja, permitir que
                 ele cadastre o ponto. */

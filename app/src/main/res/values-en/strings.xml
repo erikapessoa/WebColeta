@@ -36,10 +36,12 @@
     <string name="rn_button_cancel">Cancel</string>
     <string name="rn_msg_sucess">Your preference was saved successful!</string>
 
-    <string name="title_notification">Colect Alert</string>
-    <string name="n_message_1">The collect truck will pass</string>
+    <string name="title_notification">Collect Notification</string>
+    <string name="n_message_1">The collect truck will pass </string>
     <string name="n_time_text">in: </string>
     <string name="n_minute_text">minutes. </string>
     <string name="n_street_text">at street: </string>
-    <string name="n_message_2">The frequency of the truxl is: </string>
+    <string name="n_message_2">The frequency of the truck is: </string>
+
+    <string name="notification_alert">Collect Alert</string>
 </resources>

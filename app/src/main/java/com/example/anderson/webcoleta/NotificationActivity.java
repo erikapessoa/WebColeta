@@ -23,10 +23,10 @@ public class NotificationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
 
-        Toast.makeText(NotificationActivity.this, "Cancelando notificação", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(NotificationActivity.this, "Cancelando notificação", Toast.LENGTH_SHORT).show();
         mNotificacaoColeta = ColetaNotification.getInstance(this);
         mNotificacaoColeta.cancelNotification();
-        Toast.makeText(NotificationActivity.this, "Chamada a notificação cancelada", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(NotificationActivity.this, "Chamada a notificação cancelada", Toast.LENGTH_SHORT).show();
 
         mSP = getSharedPreferences(GarbageConstants.sFILE_SHARED_PREFERENCE, Context.MODE_PRIVATE);
         mPreferences = SavePreferences.getInstance(mSP);

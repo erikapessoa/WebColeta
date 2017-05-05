@@ -1,23 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.anderson.webcoleta.GarbagePlaceListActivity">
+    android:orientation="vertical"
+    tools:context="com.example.anderson.webcoleta.MenuActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:background="@drawable/barrapesquisa"
+        android:paddingLeft="15pt"
+        android:layout_height="35pt"
+        android:id="@+id/pesquisa"
+        android:completionThreshold="3"
+        android:layout_alignParentTop="true"
+        android:hint="Busque aqui o nome da rua"
+        />
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/list_garbage_places"></ListView>
+        android:id="@+id/list_garbage_places"
+        android:layout_below="@id/pesquisa">
 
-    <TextView android:layout_width="wrap_content"
+    </ListView>
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
         android:text="@string/list_empty_text"
+        android:layout_centerVertical="true"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textStyle="bold"
         android:id="@android:id/empty"/>
 
-</FrameLayout>
+</RelativeLayout>

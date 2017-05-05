@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WebColeta</string>
+    <string name="list_empty_text">No collect points found</string>
+    <string name="dialog_wait_title">Wait...</string>
+    <string name="dialog_wait_message">Loading informations</string>
+    <string name="connection_exception">Error connecting with server. Try again later.</string>
+    <string name="permission_rationale_location">Access to the location service is required to demonstrate the \'my location\' feature, which shows your current location on the map.</string>
+    <string name="list_header_text">Locals</string>
+
+    <string name="action_route">Trace route</string>
+
+    <plurals name="list_header_plural">
+        <item quantity="one">1 place</item>
+        <item quantity="other">%d places</item>
+    </plurals>
+
+    <string name="google_maps_key">AIzaSyDZfaNElJpjVWONnKNUf-i2FXYNQR5UKNY</string>
+
+    <string name="title_garbage_place_detail">Collect Point Detail</string>
+
+    <string name="gpd_street">Street name</string>
+    <string name="gpd_interval">Schedule</string>
+    <string name="gpd_frequency">Frequency</string>
+    <string name="gpd_register">Would you like to register alerts about this collect point?</string>
+    <string name="gpd_button_register">Yes</string>
+    <string name="gpd_button_cancel">No</string>
+
+    <string name="title_register_notification">Register Alert</string>
+
+    <string name="rn_text">Would you like to be notified how long before?</string>
+    <string name="rn_time_1">15 minutes</string>
+    <string name="rn_time_2">30 minutes</string>
+    <string name="rn_time_3">1 hour</string>
+    <string name="rn_button_ok">Register</string>
+    <string name="rn_button_cancel">Cancel</string>
+    <string name="rn_msg_sucess">Your preference was saved successful!</string>
+
+    <string name="title_notification">Colect Alert</string>
+    <string name="n_message_1">The collect truck will pass</string>
+    <string name="n_time_text">in: </string>
+    <string name="n_minute_text">minutes. </string>
+    <string name="n_street_text">at street: </string>
+    <string name="n_message_2">The frequency of the truxl is: </string>
+</resources>

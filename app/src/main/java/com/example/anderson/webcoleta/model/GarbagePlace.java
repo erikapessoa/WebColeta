@@ -19,6 +19,7 @@ public class GarbagePlace implements Serializable {
     private String Frequencia;
     private String Id;
 
+    private boolean autoComp;
 
     public String getIntervalo ()
     {
@@ -72,12 +73,27 @@ public class GarbagePlace implements Serializable {
 
     public void setFrequencia(String Frequencia) {this.Frequencia = Frequencia; }
 
+    // Atribuindo True ou False se está atribuind o autoComp ou não.
+    public void setAutoComp(boolean flag) {
+        this.autoComp = flag;
+    }
+
+    public boolean isAutoComp() {
+        return autoComp;
+    }
+
     @Override
     public String toString()
     {
-        return "ClassPojo [Intervalo = "+mIntervalo+", Setor = "+mSetor+", Id = "+Id+", Endereco = "+Endereco+
+        // se a chamada está vindo do autoCompView
+        if(this.isAutoComp()) {
+            return this.getEndereco();
+        } else {
+            return "ClassPojo [Intervalo = "+mIntervalo+", Setor = "+mSetor+", Id = "+Id+", Endereco = "+Endereco+
 
-                ", Turno = "+Turno+", RotaSetor = "+RotaSetor+", Frequencia = "+ Frequencia+"]";
+                    ", Turno = "+Turno+", RotaSetor = "+RotaSetor+", Frequencia = "+ Frequencia+"]";
+        }
+
     }
 
 }

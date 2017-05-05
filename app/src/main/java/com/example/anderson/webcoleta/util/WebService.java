@@ -88,12 +88,14 @@ public class WebService  {
                 LogWrapper.log("Erro HTTP " + connection.getResponseCode());
                 //  Snackbar.make(mListPlaces, getString(R.string.connection_exception), Snackbar.LENGTH_LONG).show();
             }
+
         } catch (IOException e2) {
             // Toast.makeText(ListPlacesActivity.this, R.string.connection_exception, Toast.LENGTH_LONG).show();
             //Snackbar.make(mListPlaces, getString(R.string.connection_exception), Snackbar.LENGTH_LONG).show();
             mGarbagePlacles = null;
             Log.i("Exceção: ", e2.toString());
         }
+
 
         //retorna o array contendo todos os pontos de coleta
         return mGarbagePlacles;
@@ -111,7 +113,7 @@ public class WebService  {
 
         try {
 
-            URL url = new URL(Utils.sURL);
+            URL url = new URL(GarbageConstants.sURL);
 
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setReadTimeout(10 * 1000);
@@ -136,15 +138,15 @@ public class WebService  {
                     if (count > 1) {
 
                         if(row[opcao].toLowerCase().toString().contains(letra)) {
-                                 GarbagePlace mGarbagePlace = new GarbagePlace();
-                                 mGarbagePlace.setId(String.valueOf(count - 1));
-                                 mGarbagePlace.setIntervalo(row[INTERVALO]);
-                                 mGarbagePlace.setSetor(row[SETOR]);
-                                 mGarbagePlace.setEndereco(row[ENDERECO]);
-                                 mGarbagePlace.setTurno(row[TURNO]);
-                                 mGarbagePlace.setRotaSetor(row[ROTASETOR]);
-                                 mGarbagePlace.setFrequencia(row[FREQUENCIA]);
-                                mArrGPI2.add(mGarbagePlace);
+                            GarbagePlace mGarbagePlace = new GarbagePlace();
+                            mGarbagePlace.setId(String.valueOf(count - 1));
+                            mGarbagePlace.setIntervalo(row[INTERVALO]);
+                            mGarbagePlace.setSetor(row[SETOR]);
+                            mGarbagePlace.setEndereco(row[ENDERECO]);
+                            mGarbagePlace.setTurno(row[TURNO]);
+                            mGarbagePlace.setRotaSetor(row[ROTASETOR]);
+                            mGarbagePlace.setFrequencia(row[FREQUENCIA]);
+                            mArrGPI2.add(mGarbagePlace);
                         }
                         //  Log.i("Valor = ", String.valueOf(count));
                     }

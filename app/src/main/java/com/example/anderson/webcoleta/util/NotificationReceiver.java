@@ -20,7 +20,6 @@ public class NotificationReceiver extends BroadcastReceiver {
         ColetaNotification notification = ColetaNotification.getInstance(context);
         notification.createNotification();
 
-        throw new UnsupportedOperationException("Not yet implemented");
     }
 
 

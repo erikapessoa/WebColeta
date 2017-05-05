@@ -48,9 +48,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="275dp">
-
-
+        android:layout_height="200dp">
     <fragment
             android:id="@+id/mapview"
             android:name="com.google.android.gms.maps.SupportMapFragment"

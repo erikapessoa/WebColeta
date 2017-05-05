@@ -9,6 +9,7 @@ import android.support.v7.app.NotificationCompat;
 
 import com.example.anderson.webcoleta.MainActivity;
 import com.example.anderson.webcoleta.NotificationActivity;
+import com.example.anderson.webcoleta.R;
 
 /**
  * Created by erika on 02/05/2017.
@@ -44,8 +45,8 @@ public class ColetaNotification {
         NotificationCompat.Builder mBuilder =
                 (NotificationCompat.Builder) new NotificationCompat.Builder(mContext)
                         .setSmallIcon(android.R.mipmap.sym_def_app_icon)
-                        .setContentTitle("WebColeta")
-                        .setContentText("Aviso de coleta");
+                        .setContentTitle(mContext.getString(R.string.app_name))
+                        .setContentText(mContext.getString(R.string.notification_alert));
 
         //Aqui eu preciso chamar minha Activity específica que vai exibir a tela com as informações
         resultIntent = new Intent(mContext, NotificationActivity.class);

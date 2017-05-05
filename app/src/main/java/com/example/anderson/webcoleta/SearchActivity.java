@@ -37,12 +37,12 @@ public class SearchActivity extends AppCompatActivity {
 
     Spinner spinnerS;
     private static final String[] itensSetor = new String[] {
-            "6-02 A", "6-04 A", "6-10 A"
+            "Escolha um setor: ", "A", "B", "C"
     };
 
     Spinner spinnerT;
     private static final String[] itensTurno = new String[] {
-            "manhã", "tarde", "noturno"
+            "Escolha um turno","manhã", "tarde", "noturno"
     };
 
     @Override
@@ -73,12 +73,12 @@ public class SearchActivity extends AppCompatActivity {
                         return;
                     }
                     letra = ((AppCompatTextView) view).getText().toString();
-                    if (letra != null) {
+
                         setContentView(R.layout.activity_garbage_place_list);
                         mListGarbagePlaces = (ListView) findViewById(R.id.list_garbage_places);
                         mListGarbagePlaces.setEmptyView(findViewById(android.R.id.empty));
                         new SyncDataTask().execute();
-                    }
+
                 }
             }
 

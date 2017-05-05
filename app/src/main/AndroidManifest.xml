@@ -34,12 +34,19 @@
         <activity android:name=".GarbagePlaceDetailActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".GarbagePlaceListActivity" />
-       <activity android:name=".SearchActivity"/>
-        <activity android:name=".RegisterNotificationActivity"/>
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".RegisterNotificationActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+
+        <receiver
+            android:name=".util.NotificationReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".NotificationActivity"></activity>
     </application>
 
 </manifest>

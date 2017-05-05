@@ -5,10 +5,11 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.ListView;
 
 import android.os.AsyncTask;
@@ -17,15 +18,8 @@ import android.widget.TextView;
 import com.example.anderson.webcoleta.adapter.GarbagePlacesAdapter;
 import com.example.anderson.webcoleta.model.GarbagePlace;
 import com.example.anderson.webcoleta.util.GarbageConstants;
-import com.example.anderson.webcoleta.util.LogWrapper;
-import com.example.anderson.webcoleta.util.Utils;
 import com.example.anderson.webcoleta.util.WebService;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 
 public class GarbagePlaceListActivity extends AppCompatActivity {
@@ -52,6 +46,7 @@ public class GarbagePlaceListActivity extends AppCompatActivity {
         mListGarbagePlaces = (ListView)findViewById(R.id.list_garbage_places);
         mListGarbagePlaces.setEmptyView(findViewById(android.R.id.empty));
         new SyncDataTask().execute();
+
     }
 
 
@@ -71,6 +66,7 @@ public class GarbagePlaceListActivity extends AppCompatActivity {
 
         addListFooter(); // --> FAZER
         addListHeared();//  --> FAZER
+
 
         mListGarbagePlaces.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -108,7 +104,6 @@ public class GarbagePlaceListActivity extends AppCompatActivity {
         mListGarbagePlaces.addFooterView(txtFooter);
 
     }
-
 
 
     private class SyncDataTask extends AsyncTask<Object, Object, Object> {

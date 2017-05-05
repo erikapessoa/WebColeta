@@ -2,15 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/planodefundo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.anderson.webcoleta.RegisterNotificationActivity">
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/rn_text"/>
+        android:text="@string/rn_text"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorSnow"
+        />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -21,18 +28,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="@string/rn_time_15"
-            android:id="@+id/time_15"/>
+            android:button="@drawable/botaoliga"
+            android:textColor="@color/colorSnow"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="@string/rn_time_1"
+            android:id="@+id/time_1"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/rn_time_30"
-            android:id="@+id/time_30"/>
+            android:button="@drawable/botaodesliga"
+            android:textColor="@color/colorSnow"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="@string/rn_time_2"
+            android:id="@+id/time_2"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/rn_time_60"
-            android:id="@+id/time_60"/>
+            android:button="@drawable/botaodesliga"
+            android:textColor="@color/colorSnow"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="@string/rn_time_3"
+            android:id="@+id/time_3"/>
     </RadioGroup>
 
     <LinearLayout
@@ -41,17 +60,22 @@
 
         <Button
             android:id="@+id/rn_register_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rn_button_ok"
-            android:onClick="saveNotification"/>
+            android:layout_width="186dp"
+            android:layout_height="113dp"
+            android:text="Registrar"
+            android:background="@drawable/botao"
+            android:textColor="@color/colorSnow"
+            android:onClick="savePreferences"/>
 
         <Button
             android:id="@+id/rn_cancel_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rn_button_cancel"
-            android:onClick="cancelNotification"  />
+            android:layout_width="182dp"
+            android:layout_height="113dp"
+            android:background="@drawable/botao"
+            android:text="Cancelar"
+            android:textColor="@color/colorSnow"
+            android:onClick="cancelNotification"
+            />
 
     </LinearLayout>
 

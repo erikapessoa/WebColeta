@@ -127,7 +127,7 @@ public class WebService  {
 
 
                 final BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-                String line = "";
+                String line;
 
                 int count = 0;
                 while ((line = reader.readLine()) != null) {
@@ -137,7 +137,7 @@ public class WebService  {
                     // Log.i("Linha: ", row[0]);
                     if (count > 1) {
 
-                        if(row[opcao].toLowerCase().toString().contains(letra)) {
+                        if(row[opcao].toLowerCase().toString().contains(letra.toLowerCase())) {
                             GarbagePlace mGarbagePlace = new GarbagePlace();
                             mGarbagePlace.setId(String.valueOf(count - 1));
                             mGarbagePlace.setIntervalo(row[INTERVALO]);

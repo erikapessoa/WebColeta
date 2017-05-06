@@ -21,7 +21,7 @@ import com.example.anderson.webcoleta.util.SavePreferences;
 import java.util.Calendar;
 
 public class RegisterNotificationActivity extends AppCompatActivity {
-
+    Intent it;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,10 @@ public class RegisterNotificationActivity extends AppCompatActivity {
     //cadastrar as preferências (tempo de antecedência do aviso
     public void savePreferences(View v) {
 
+
+
+
+
         RadioGroup mRadioGroup = null;
         GarbagePlace place = null;
         RadioButton radio = null;
@@ -40,8 +44,8 @@ public class RegisterNotificationActivity extends AppCompatActivity {
         SavePreferences savePrefs = null;
         String time = "";
         Calendar calendar = null;
-
-        place = (GarbagePlace) getIntent().getExtras().get(GarbageConstants.sEXTRA_PLACE);
+        it= getIntent();
+        place = (GarbagePlace) it.getExtras().get(GarbageConstants.sEXTRA_PLACE);
         mRadioGroup = (RadioGroup)findViewById(R.id.timeOptions);
         idRadioSelected = mRadioGroup.getCheckedRadioButtonId();
         radio = (RadioButton)findViewById(idRadioSelected);
@@ -67,8 +71,13 @@ public class RegisterNotificationActivity extends AppCompatActivity {
         calendar = createDate(place, time);
         notificationSchedule(calendar);
 
+
+        it.putExtra("RESULT_OK", 1);
+        setResult(1,it);
+        finish();
+
         //mensagem para o usuário
-        Toast.makeText(RegisterNotificationActivity.this, R.string.rn_msg_sucess, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(RegisterNotificationActivity.this, R.string.rn_msg_sucess, Toast.LENGTH_SHORT).show();
 
         //Log.i("RegisterActivity", savePrefs.getPreference(GarbageConstants.sKey_Interval));
     }
@@ -100,6 +109,8 @@ public class RegisterNotificationActivity extends AppCompatActivity {
         //depois precisa ver a frequencia para fazer o aviso
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
                 AlarmManager.INTERVAL_FIFTEEN_MINUTES, pendingIntent);
+
+
     }
 
     public Calendar createDate(GarbagePlace place, String timeBefore) {

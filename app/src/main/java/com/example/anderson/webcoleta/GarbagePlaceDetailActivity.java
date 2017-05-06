@@ -36,6 +36,13 @@ public class GarbagePlaceDetailActivity extends AppCompatActivity implements OnM
     private GarbagePlace mGarbagePlace;
     private GoogleMap mMap;
 
+    Button register;
+    Button cancelRegister;
+
+    TextView registered;
+
+    public static int RESULT_INTENT = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +52,9 @@ public class GarbagePlaceDetailActivity extends AppCompatActivity implements OnM
                 .findFragmentById(R.id.mapview);
         mapFragment.getMapAsync(this);
 
+        register= (Button)findViewById(R.id.register_garbage_place_button);
+        cancelRegister = (Button)findViewById(R.id.cancel_garbage_place_button);
+        registered = (TextView)findViewById(R.id.registered);
         mGarbagePlace = (GarbagePlace) getIntent().getSerializableExtra(GarbageConstants.sEXTRA_PLACE);
 
         mTextStreet = (TextView) findViewById(R.id.txt_garbage_place_street);
@@ -57,6 +67,30 @@ public class GarbagePlaceDetailActivity extends AppCompatActivity implements OnM
             mTextFrequency.setText(mGarbagePlace.getFrequencia());
         }
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode==1)
+        {
+            register.setEnabled(false);
+            register.setVisibility(View.GONE);
+            cancelRegister.setEnabled(false);
+            cancelRegister.setVisibility(View.GONE);
+            registered.setText("Você está registrado nesta coleta!");
+
+
+        }
+
+       /* if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Intent intent = new Intent(this, PictureActivity.class);
+            intent.putExtras(data.getExtras());
+            startActivity(intent);*/
+    }
+
+
+
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -123,7 +157,7 @@ public class GarbagePlaceDetailActivity extends AppCompatActivity implements OnM
         Intent it = new Intent(GarbagePlaceDetailActivity.this, RegisterNotificationActivity.class);
         it.putExtra(GarbageConstants.sEXTRA_PLACE, mGarbagePlace);
 
-        startActivity(it);
+        startActivityForResult(it, RESULT_INTENT);
     }
 
     public void cancelGarbagePlaceNotification(View v) {

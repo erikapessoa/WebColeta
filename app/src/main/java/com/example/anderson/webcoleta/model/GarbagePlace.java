@@ -8,9 +8,6 @@ import java.io.Serializable;
 
 public class GarbagePlace implements Serializable {
 
-    private String id;
-    //private String type;
-
     private String mInterval;
     private String mSector;
     private String mStreet;

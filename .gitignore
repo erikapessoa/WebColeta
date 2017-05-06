@@ -1,7 +1,9 @@
 #Build
+.gradle/3.3/
 .idea/
 .gradle/
 build/
+gradle/
 app/build/
 
 
@@ -60,3 +62,5 @@ build/android-profile/profile-2017-04-28-10-58-49-688.rawproto
 .idea/workspace.xml
 .gradle/3.3/taskArtifacts/fileHashes.bin
 app/build/intermediates/blame/res/debug/multi/values-ka-rGE.json
+*.bin
+.gradle/3.3/taskArtifacts/taskArtifacts.lock

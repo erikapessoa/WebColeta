@@ -26,6 +26,7 @@ public class RegisterNotificationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_notification);
+        Log.i("RegisterNotification", "iniciando Register Notification");
     }
 
     //cadastrar as preferências (tempo de antecedência do aviso
@@ -66,8 +67,8 @@ public class RegisterNotificationActivity extends AppCompatActivity {
         calendar = createDate(place, time);
         notificationSchedule(calendar);
 
-        it.putExtra("RESULT_OK", 1);
-        setResult(1,it);
+        //it.putExtra("RESULT_OK", 1);
+        setResult(RESULT_OK);
         finish();
 
         //Log.i("RegisterActivity", savePrefs.getPreference(GarbageConstants.sKey_Interval));

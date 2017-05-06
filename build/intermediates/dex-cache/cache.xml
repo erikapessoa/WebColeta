@@ -3,66 +3,192 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\Anderson\.android\build-cache\0eb8f37a673d72a8b05c3054ed04a55794640512\output\jars\classes.jar"
+        jar="C:\Users\erika\.android\build-cache\bc3348445bbec9025145344271df9b3a9b13dbf2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\pre-dexed\debug\classes_f7acd330aa63816f301d13436bc4300a7f79f679.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\erika\.android\build-cache\2aebc055d9cd4d4ae14bc540fc5c9619effbd920\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="345a1b5cf5b144ce18ba6962bc66a7e2f26c1c1b">
-        <dex dex="C:\Users\Anderson\AndroidStudioProjects\WebColeta\app\build\intermediates\pre-dexed\debug\classes_d8065b8133713abf3701a96a1cdeab3562594abe.jar" />
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\pre-dexed\debug\classes_cc0ba77d26ec0c003cef125a409217179703386d.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Anderson\.android\build-cache\de0ac81743086c7b2108b0387b025c0076b82249\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="77f9593d979f4347344be233bd0d888315f79517">
-        <dex dex="C:\Users\Anderson\AndroidStudioProjects\WebColeta\app\build\intermediates\pre-dexed\debug\classes_bc824d016c1d37b537d1395e02b5d3f196d4cdbc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Anderson\.android\build-cache\7e7163c4aaa8d039eeb30e518cafc99e43525558\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="01a90bbb9495a8bbf6f3cfdf12f1b35caaa9524b">
-        <dex dex="C:\Users\Anderson\AndroidStudioProjects\WebColeta\app\build\intermediates\pre-dexed\debug\classes_751146753eccc3deb3db2e93d65d0c5256861fb1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="a60a5e993c98c864010053cb901b7eab25306568">
-        <dex dex="C:\Users\Anderson\AndroidStudioProjects\WebColeta\app\build\intermediates\pre-dexed\debug\gson-2.2.4_313aff129984a0a45e086871ec03bfcc02e7284e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Anderson\.android\build-cache\de419ffa012916a82b2d1d9a17e4cded2ba5def5\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4b1a7fac58cc85b115adee653a10b6300f90951a">
-        <dex dex="C:\Users\Anderson\AndroidStudioProjects\WebColeta\app\build\intermediates\pre-dexed\debug\classes_409238c0be65dda4e5d4194826716d947d5a42be.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Anderson\.android\build-cache\f5fdf4ffa9806d8958e5ec6332ba16bb059d4eb6\output\jars\classes.jar"
+        jar="C:\Users\erika\.android\build-cache\ea06f6a3101dac61b988ca1c9cbcab97b00a4845\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="0c3e81d3eb86b86d194b5cdb6a4de78203f6f7fd">
-        <dex dex="C:\Users\Anderson\AndroidStudioProjects\WebColeta\app\build\intermediates\pre-dexed\debug\classes_9342c057c270018917c225fe9db24d543a4c3972.jar" />
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\pre-dexed\debug\classes_e7f42afba0521a6686c93c03b43643c2a166eb6e.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Anderson\.android\build-cache\7e8b352fb8341a29acbbe9e35325e6727574d6c5\output\jars\classes.jar"
+        jar="C:\Users\erika\.android\build-cache\f50813583e0e750d6acb63ae6313d49fa5b65871\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="01a90bbb9495a8bbf6f3cfdf12f1b35caaa9524b">
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\pre-dexed\debug\classes_1d22a10d946b3077ccc2d34dc01f5bd5f8d48388.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\erika\.android\build-cache\b83115c800823564b5a03bbbf0f8a3a499c55298\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b1a7fac58cc85b115adee653a10b6300f90951a">
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\pre-dexed\debug\classes_6c7ba2a3e56a1d098951e92d5873e16b45152de0.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_3d6718f85aee2b4f5b46cd15b1e35de26ab835ce\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\erika\.android\build-cache\188ca9773a4d03f3be028d3a08f94ee8aae013e7\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\pre-dexed\debug\classes_5732d7507a7dc0afa1916d2a319bfd211baf1d49.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\erika\.android\build-cache\37a763dd25fb7681f767c6d4c561bd3d9c32abd9\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\pre-dexed\debug\classes_7e475fcd5b5c55bebd1eba477dbd5226de8c9c4b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\erika\.android\build-cache\b478cbf62c89deb3ae9c900b515bb53bc1a0c07d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\pre-dexed\debug\classes_481efeb8062c7928ae20347a9a805456a86ae53a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\erika\.android\build-cache\c75ea8d946b1c0e2e82a0c7a3f62215e87723a14\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\pre-dexed\debug\classes_edef57c30083ba1e4d7a81a6c0f653c92946fbac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\erika\.android\build-cache\9d67b067a6faf4bb1cfe4d3ee857e57e18b5e494\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="6d9ed9a288364688e7fcf6704776284dac1eb42e">
-        <dex dex="C:\Users\Anderson\AndroidStudioProjects\WebColeta\app\build\intermediates\pre-dexed\debug\classes_22407701f8f4176bd1937837264ad8f92fa34f6a.jar" />
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\pre-dexed\debug\classes_86d55212f08f1bea2de112b4e71102559238a5f3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\erika\.android\build-cache\408d43fea913a29e9a287e583cc929ae227d548a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="77f9593d979f4347344be233bd0d888315f79517">
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\pre-dexed\debug\classes_348deb028756518bc38249b6e72fbcdc0b433fe8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\_Android\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.1_1da13689b3706bd20a1c0739aad13fa68444944f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\erika\.android\build-cache\d9fde9b68a7b272059c4332b03d6dc8202a9c548\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\pre-dexed\debug\classes_7abda5d8b1d844aea099cb7b84ab25c834d740cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\erika\.android\build-cache\c3d28d997126aa8cdc2ad90b9988e483ba94a057\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\pre-dexed\debug\classes_7e72667a0388ec6098054b85ee9beaefbd8ca66c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\_Android\AndroidStudio\gradle\m2repository\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\pre-dexed\debug\gson-2.2.4_352fb4726afac14a369e73889a879bd48003a6c4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\erika\.android\build-cache\73008cb6ac869cd55def841a7f4ad636d535c8ec\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\pre-dexed\debug\classes_298cb0469ee04ff4e26d95c55d04c84933dc79ba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\erika\.android\build-cache\002b31206d84f20662c496b835f348b623a56020\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\pre-dexed\debug\classes_f5569d07b6d42038e8c16e7b92de529e9a8e0170.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\erika\.android\build-cache\2fc86a3c2bf9f246e9b5bcc3ebfcfde84374c6d3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\pre-dexed\debug\classes_8f7ed8bd631988e16b84942d6fff7cb0b64e3581.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="99f9926fe7b9c6126dbe647c7664e4dec39a0f1f">
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_4ea5652b81ffdc39e91310d3b34f3f1d31efdecb\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\_Android\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="D:\Dados\__PosIot\AndroidBasico\Projeto\WebColeta\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_49598f84ca3b6c3943b383b5b939fbd5c43b59d2.jar" />
     </item>
 
 </items>

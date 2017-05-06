@@ -2,7 +2,7 @@
 
     <string name="app_name">WebColeta</string>
 
-    <string name="search_button">Busca</string>
+    <string name="search_button">Lista</string>
     <string name="list_button">Busca</string>
 
     <string name="list_empty_text">Não foram encontrados pontos de coleta</string>

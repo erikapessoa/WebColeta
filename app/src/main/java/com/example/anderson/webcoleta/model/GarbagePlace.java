@@ -42,9 +42,9 @@ public class GarbagePlace implements Serializable {
         return mId;
     }
 
-    public void setId (String Id)
+    public void setId (String id)
     {
-        this.mId = Id;
+        this.mId = id;
     }
 
     public String getStreet ()
@@ -52,18 +52,18 @@ public class GarbagePlace implements Serializable {
         return this.mStreet;
     }
 
-    public void setStreet(String Endereco)
+    public void setStreet(String endereco)
     {
-        this.mStreet = Endereco;
+        this.mStreet = endereco;
     }
 
     public String getShift() { return  this.mShift; }
 
-    public void setShift(String Turno) {this.mShift = Turno; }
+    public void setShift(String turno) {this.mShift = turno; }
 
     public String getRouteSector() {return this.mRouteSector; }
 
-    public void setRouteSector(String RotaSetor) {this.mRouteSector = RotaSetor; }
+    public void setRouteSector(String rotaSetor) {this.mRouteSector = rotaSetor; }
 
     public String getFrequency()  {return this.mFrequency; }
 

@@ -38,10 +38,8 @@ public class GarbagePlaceDetailActivity extends AppCompatActivity implements OnM
 
     Button register;
     Button cancelRegister;
-
     TextView registered;
-
-    public static int RESULT_INTENT = 1;
+    public static int RESULT_INTENT = 7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +70,7 @@ public class GarbagePlaceDetailActivity extends AppCompatActivity implements OnM
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == 1) {
+        if (requestCode == RESULT_INTENT && resultCode == RESULT_OK) {
             register.setEnabled(false);
             register.setVisibility(View.GONE);
             cancelRegister.setEnabled(false);
@@ -144,6 +142,8 @@ public class GarbagePlaceDetailActivity extends AppCompatActivity implements OnM
 
         Intent it = new Intent(GarbagePlaceDetailActivity.this, RegisterNotificationActivity.class);
         it.putExtra(GarbageConstants.sEXTRA_PLACE, mGarbagePlace);
+
+        Log.i("GarbagePlaceDetail", "chamando ActivityForResult");
 
         startActivityForResult(it, RESULT_INTENT);
     }

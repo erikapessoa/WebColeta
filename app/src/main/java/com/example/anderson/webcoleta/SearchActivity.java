@@ -127,8 +127,8 @@ public class SearchActivity extends AppCompatActivity {
 
         mListGarbagePlaces.setAdapter(mGarbagePlacesAdapter);
 
-        addListFooter(); // --> FAZER
-        addListHeared();//  --> FAZER
+        addListFooter(); //
+        addListHeared();//
 
         mListGarbagePlaces.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -168,12 +168,8 @@ public class SearchActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
     }
+
     private void addListFooter() {
         final int PADDING = 10;
         TextView txtHeader = new TextView(this);

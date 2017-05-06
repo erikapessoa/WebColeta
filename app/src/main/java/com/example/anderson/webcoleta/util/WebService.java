@@ -140,7 +140,7 @@ public class WebService  {
                             mGarbagePlace.setInterval(row[sINTERVAL]);
                             mGarbagePlace.setSector(row[sSECTOR]);
                             mGarbagePlace.setStreet(row[sSTREET]);
-                            mGarbagePlace.setStreet(row[sSHIFT]);
+                            mGarbagePlace.setShift(row[sSHIFT]);
                             mGarbagePlace.setRouteSector(row[sROUTESECTOR]);
                             mGarbagePlace.setFrequency(row[sFREQUENCY]);
                             mArrGPI2.add(mGarbagePlace);

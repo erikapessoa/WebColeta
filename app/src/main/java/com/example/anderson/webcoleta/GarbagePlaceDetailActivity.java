@@ -9,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -62,9 +61,9 @@ public class GarbagePlaceDetailActivity extends AppCompatActivity implements OnM
         mTextFrequency = (TextView) findViewById(R.id.txt_garbage_place_frequency);
 
         if (mGarbagePlace != null){
-            mTextStreet.setText(mGarbagePlace.getEndereco());
-            mTextInterval.setText(mGarbagePlace.getIntervalo());
-            mTextFrequency.setText(mGarbagePlace.getFrequencia());
+            mTextStreet.setText(mGarbagePlace.getStreet());
+            mTextInterval.setText(mGarbagePlace.getInterval());
+            mTextFrequency.setText(mGarbagePlace.getFrequency());
         }
     }
 

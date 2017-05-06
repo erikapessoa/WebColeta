@@ -62,9 +62,9 @@ public class RegisterNotificationActivity extends AppCompatActivity {
         sp = getSharedPreferences(GarbageConstants.sFILE_SHARED_PREFERENCE, Context.MODE_PRIVATE);
         savePrefs = SavePreferences.getInstance(sp);
         savePrefs.savePreference(GarbageConstants.sKey_Time, time);
-        savePrefs.savePreference(GarbageConstants.sKey_Street_Name, place.getEndereco());
-        savePrefs.savePreference(GarbageConstants.sKey_Frequency, place.getFrequencia());
-        savePrefs.savePreference(GarbageConstants.sKey_Interval, place.getIntervalo());
+        savePrefs.savePreference(GarbageConstants.sKey_Street_Name, place.getStreet());
+        savePrefs.savePreference(GarbageConstants.sKey_Frequency, place.getFrequency());
+        savePrefs.savePreference(GarbageConstants.sKey_Interval, place.getInterval());
 
         //registrando a notificação
         //horário que a notificação será criada
@@ -123,9 +123,9 @@ public class RegisterNotificationActivity extends AppCompatActivity {
 
         calendar =  Calendar.getInstance();
         tb = -Integer.parseInt(timeBefore);
-        interval = place.getIntervalo();
+        interval = place.getInterval();
         //hourMinute = interval.split(":");
-        frequency = place.getFrequencia(); //ainda desconsiderando esta informação para fazer o agendamento
+        frequency = place.getFrequency(); //ainda desconsiderando esta informação para fazer o agendamento
 
         hour = Integer.parseInt(interval.substring(0,2));
         minute = Integer.parseInt(interval.substring(3,5));

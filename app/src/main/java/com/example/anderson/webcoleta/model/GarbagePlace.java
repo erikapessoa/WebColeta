@@ -11,75 +11,74 @@ public class GarbagePlace implements Serializable {
     private String id;
     //private String type;
 
-    private String mIntervalo;
-    private String mSetor;
-    private String Endereco;
-    private String Turno;
-    private String RotaSetor;
-    private String Frequencia;
-    private String Id;
+    private String mInterval;
+    private String mSector;
+    private String mStreet;
+    private String mShift;
+    private String mRouteSector;
+    private String mFrequency;
+    private String mId;
+    private boolean mAutoComp;
 
-    private boolean autoComp;
-
-    public String getIntervalo ()
+    public String getInterval()
     {
-        return this.mIntervalo;
+        return this.mInterval;
     }
 
-    public void setIntervalo (String Intervalo)
+    public void setInterval(String Intervalo)
     {
-        this.mIntervalo = Intervalo;
+        this.mInterval = Intervalo;
     }
 
-    public String getSetor ()
+    public String getSector ()
     {
-        return this.mSetor;
+        return this.mSector;
     }
 
-    public void setSetor (String Setor)
+    public void setSector (String setor)
     {
-        this.mSetor = Setor;
+        this.mSector = setor;
     }
 
     public String getId ()
     {
-        return Id;
+        return mId;
     }
 
     public void setId (String Id)
     {
-        this.Id = Id;
+        this.mId = Id;
     }
 
-    public String getEndereco ()
+    public String getStreet ()
     {
-        return this.Endereco;
+        return this.mStreet;
     }
 
-    public void setEndereco (String Endereco)
+    public void setStreet(String Endereco)
     {
-        this.Endereco = Endereco;
+        this.mStreet = Endereco;
     }
 
-    public String getTurno() { return  this.Turno; }
+    public String getShift() { return  this.mShift; }
 
-    public void setTurno(String Turno) {this.Turno = Turno; }
+    public void setShift(String Turno) {this.mShift = Turno; }
 
-    public String getRotaSetor() {return this.RotaSetor; }
+    public String getRouteSector() {return this.mRouteSector; }
 
-    public void setRotaSetor(String RotaSetor) {this.RotaSetor = RotaSetor; }
+    public void setRouteSector(String RotaSetor) {this.mRouteSector = RotaSetor; }
 
-    public String getFrequencia() {return this.Frequencia; }
+    public String getFrequency()  {return this.mFrequency; }
 
-    public void setFrequencia(String Frequencia) {this.Frequencia = Frequencia; }
+    public void setFrequency(String Frequencia) {this.mFrequency = Frequencia; }
 
     // Atribuindo True ou False se está atribuind o autoComp ou não.
     public void setAutoComp(boolean flag) {
-        this.autoComp = flag;
+        this.mAutoComp = flag;
     }
 
     public boolean isAutoComp() {
-        return autoComp;
+        return mAutoComp;
     }
 
     @Override
@@ -87,11 +86,11 @@ public class GarbagePlace implements Serializable {
     {
         // se a chamada está vindo do autoCompView
         if(this.isAutoComp()) {
-            return this.getEndereco();
+            return this.getStreet();
         } else {
-            return "ClassPojo [Intervalo = "+mIntervalo+", Setor = "+mSetor+", Id = "+Id+", Endereco = "+Endereco+
+            return "ClassPojo [Intervalo = "+mInterval+", Setor = "+ mSector +", Id = "+mId+", mStreet = "+ mStreet +
 
-                    ", Turno = "+Turno+", RotaSetor = "+RotaSetor+", Frequencia = "+ Frequencia+"]";
+                    ", Turno = "+mShift+", RotaSetor = "+mRouteSector+", Frequencia = "+ mFrequency+"]";
         }
 
     }

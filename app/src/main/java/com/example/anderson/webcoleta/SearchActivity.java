@@ -67,9 +67,10 @@ public class SearchActivity extends AppCompatActivity {
 
 
                     if(position == 0) {
-                        Toast.makeText(SearchActivity.this, "Escolha um elemento válido: ", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(SearchActivity.this, "Escolha um elemento válido: ", Toast.LENGTH_SHORT).show();
                         return;
                     }
+
                     letra = ((AppCompatTextView) view).getText().toString();
 
                         setContentView(R.layout.activity_garbage_place_list);
@@ -91,7 +92,7 @@ public class SearchActivity extends AppCompatActivity {
 
 
                     if(position == 0) {
-                        Toast.makeText(SearchActivity.this, "Escolha um elemento válido: ", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(SearchActivity.this, "Escolha um elemento válido: ", Toast.LENGTH_SHORT).show();
                         return;
                     }
                     letra = ((AppCompatTextView) view).getText().toString();

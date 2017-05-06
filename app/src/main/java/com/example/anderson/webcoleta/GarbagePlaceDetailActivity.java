@@ -36,9 +36,6 @@ public class GarbagePlaceDetailActivity extends AppCompatActivity implements OnM
     private GarbagePlace mGarbagePlace;
     private GoogleMap mMap;
 
-    Button register;
-    Button cancelRegister;
-    TextView registered;
     public static int RESULT_INTENT = 7;
 
     @Override
@@ -50,9 +47,6 @@ public class GarbagePlaceDetailActivity extends AppCompatActivity implements OnM
                 .findFragmentById(R.id.mapview);
         mapFragment.getMapAsync(this);
 
-        register= (Button)findViewById(R.id.register_garbage_place_button);
-        cancelRegister = (Button)findViewById(R.id.cancel_garbage_place_button);
-        registered = (TextView)findViewById(R.id.registered);
         mGarbagePlace = (GarbagePlace) getIntent().getSerializableExtra(GarbageConstants.sEXTRA_PLACE);
 
         mTextStreet = (TextView) findViewById(R.id.txt_garbage_place_street);
@@ -70,11 +64,22 @@ public class GarbagePlaceDetailActivity extends AppCompatActivity implements OnM
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+        Button register;
+        Button cancelRegister;
+        TextView registered;
+        TextView msg;
+
+        register = (Button)findViewById(R.id.register_garbage_place_button);
+        cancelRegister = (Button)findViewById(R.id.cancel_garbage_place_button);
+        registered = (TextView)findViewById(R.id.registered);
+        msg = (TextView)findViewById(R.id.txt_garbage_place_register);
+
         if (requestCode == RESULT_INTENT && resultCode == RESULT_OK) {
-            register.setEnabled(false);
+            //register.setEnabled(false);
             register.setVisibility(View.GONE);
-            cancelRegister.setEnabled(false);
+            //cancelRegister.setEnabled(false);
             cancelRegister.setVisibility(View.GONE);
+            msg.setVisibility(View.GONE);
             registered.setText(R.string.rn_msg_sucess);
         }
     }

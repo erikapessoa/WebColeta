@@ -1,7 +1,5 @@
 package com.example.anderson.webcoleta.util;
 
-import android.app.ProgressDialog;
-import android.os.AsyncTask;
 import android.util.Log;
 
 
@@ -11,7 +9,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -24,12 +21,12 @@ public class WebService  {
     private ArrayList<GarbagePlace> mArrGPI = new ArrayList<GarbagePlace>();
     private ArrayList<GarbagePlace> mArrGPI2 = new ArrayList<GarbagePlace>();
 
-    private static int INTERVALO = 0;
-    private static int SETOR = 1;
-    private static int ENDERECO = 2;
-    private static int TURNO = 3;
-    private static int ROTASETOR = 4;
-    private static int FREQUENCIA = 5;
+    private static int sINTERVAL = 0;
+    private static int sSECTOR = 1;
+    private static int sSTREET = 2;
+    private static int sSHIFT = 3;
+    private static int sROUTESECTOR = 4;
+    private static int sFREQUENCY = 5;
 
 
     private GarbagePlace[] mGarbagePlacles;
@@ -63,12 +60,12 @@ public class WebService  {
                     if (count > 1) {
                         GarbagePlace mGarbagePlace = new GarbagePlace();
                         mGarbagePlace.setId(String.valueOf(count - 1));
-                        mGarbagePlace.setIntervalo(row[INTERVALO]);
-                        mGarbagePlace.setSetor(row[SETOR]);
-                        mGarbagePlace.setEndereco(row[ENDERECO]);
-                        mGarbagePlace.setTurno(row[TURNO]);
-                        mGarbagePlace.setRotaSetor(row[ROTASETOR]);
-                        mGarbagePlace.setFrequencia(row[FREQUENCIA]);
+                        mGarbagePlace.setInterval(row[sINTERVAL]);
+                        mGarbagePlace.setSector(row[sSECTOR]);
+                        mGarbagePlace.setStreet(row[sSTREET]);
+                        mGarbagePlace.setShift(row[sSHIFT]);
+                        mGarbagePlace.setRouteSector(row[sROUTESECTOR]);
+                        mGarbagePlace.setFrequency(row[sFREQUENCY]);
                         mArrGPI.add(mGarbagePlace);
                         //  Log.i("Valor = ", String.valueOf(count));
                     }
@@ -107,9 +104,9 @@ public class WebService  {
         int opcao;
 
         if(letra.length() > 1)
-            opcao = TURNO;
+            opcao = sSHIFT;
         else
-            opcao = SETOR;
+            opcao = sSECTOR;
 
         try {
 
@@ -140,12 +137,12 @@ public class WebService  {
                         if(row[opcao].toLowerCase().toString().contains(letra.toLowerCase())) {
                             GarbagePlace mGarbagePlace = new GarbagePlace();
                             mGarbagePlace.setId(String.valueOf(count - 1));
-                            mGarbagePlace.setIntervalo(row[INTERVALO]);
-                            mGarbagePlace.setSetor(row[SETOR]);
-                            mGarbagePlace.setEndereco(row[ENDERECO]);
-                            mGarbagePlace.setTurno(row[TURNO]);
-                            mGarbagePlace.setRotaSetor(row[ROTASETOR]);
-                            mGarbagePlace.setFrequencia(row[FREQUENCIA]);
+                            mGarbagePlace.setInterval(row[sINTERVAL]);
+                            mGarbagePlace.setSector(row[sSECTOR]);
+                            mGarbagePlace.setStreet(row[sSTREET]);
+                            mGarbagePlace.setStreet(row[sSHIFT]);
+                            mGarbagePlace.setRouteSector(row[sROUTESECTOR]);
+                            mGarbagePlace.setFrequency(row[sFREQUENCY]);
                             mArrGPI2.add(mGarbagePlace);
                         }
                         //  Log.i("Valor = ", String.valueOf(count));

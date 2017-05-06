@@ -15,7 +15,7 @@
         android:textColor="@color/colorSnow"
         android:textStyle="bold"
         android:layout_height="wrap_content"
-        android:text="Turno"
+        android:text="@string/shift_button"
         android:layout_marginStart="32dp"
         android:layout_marginBottom="30dp"
         android:layout_alignBottom="@+id/spinner1"
@@ -33,13 +33,11 @@
         android:layout_toEndOf="@+id/textView2" />
 
 
-
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="90dp"
         android:layout_height="wrap_content"
-        android:text="Setor"
+        android:text="@string/sector_button"
         android:textStyle="bold"
         android:textSize="15pt"
         android:textColor="@color/colorSnow"

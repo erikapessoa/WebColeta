@@ -36,10 +36,6 @@ public class GarbagePlaceDetailActivity extends AppCompatActivity implements OnM
     private GarbagePlace mGarbagePlace;
     private GoogleMap mMap;
 
-    //private boolean mPermissionDenied = false;
-    //private GoogleMap mMap;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,14 +56,6 @@ public class GarbagePlaceDetailActivity extends AppCompatActivity implements OnM
             mTextInterval.setText(mGarbagePlace.getIntervalo());
             mTextFrequency.setText(mGarbagePlace.getFrequencia());
         }
-
-
-
-        /* Verificar se este ponto de coleta está registrado para receber notificações, caso esteja,
-        exibir esta infrmação e permitir que ele descadastre o ponto. Caso não esteja, permitir que
-                ele cadastre o ponto. */
-
-
     }
 
     @Override
@@ -85,8 +73,6 @@ public class GarbagePlaceDetailActivity extends AppCompatActivity implements OnM
         } catch (Exception e) {
             Log.i("Exceção: ", e.toString());
         }
-
-
     }
 
     @Override
@@ -129,14 +115,8 @@ public class GarbagePlaceDetailActivity extends AppCompatActivity implements OnM
         } else if (mMap != null) {
             // Access to the location has been granted to the app.
             mMap.setMyLocationEnabled(true);
-
-
-
         }
     }
-
-
-
 
     public void registerGarbagePlaceNotification(View v) {
 

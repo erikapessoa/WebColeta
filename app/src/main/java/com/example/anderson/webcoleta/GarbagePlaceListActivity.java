@@ -97,7 +97,7 @@ public class GarbagePlaceListActivity extends AppCompatActivity {
 
 
           // para pegar o item escolhido depois da filtro/busca
-        busca.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                busca.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 GarbagePlace place = (GarbagePlace) adapterView.getItemAtPosition(i);

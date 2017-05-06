@@ -15,11 +15,8 @@
     <string name="shift_button">Turno</string>
     <string name="sector_button">Setor</string>
 
-    <string name="sector_choose">Escolha um setor: </string>
-    <string name="sector_a">A</string>
-    <string name="sector_b">B</string>
-    <string name="sector_c">C</string>
-
+    <string name="register_button">Registrar</string>
+    <string name="cancel_button">Cancelar</string>
 
     <string name="list_hint_text">Busque aqui o nome da rua</string>
 

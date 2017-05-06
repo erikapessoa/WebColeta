@@ -27,7 +27,6 @@ public class RegisterNotificationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_notification);
-
     }
 
     //cadastrar as preferências (tempo de antecedência do aviso

@@ -60,7 +60,7 @@
             android:id="@+id/rn_register_button"
             android:layout_width="186dp"
             android:layout_height="113dp"
-            android:text="Registrar"
+            android:text="@string/register_button"
             android:background="@drawable/botao"
             android:textColor="@color/colorSnow"
             android:onClick="savePreferences"/>
@@ -70,7 +70,7 @@
             android:layout_width="182dp"
             android:layout_height="113dp"
             android:background="@drawable/botao"
-            android:text="Cancelar"
+            android:text="@string/cancel_button"
             android:textColor="@color/colorSnow"
             android:onClick="cancelNotification"
             />

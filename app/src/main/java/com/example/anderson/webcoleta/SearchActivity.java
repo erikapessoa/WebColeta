@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -23,16 +22,13 @@ import com.example.anderson.webcoleta.model.GarbagePlace;
 import com.example.anderson.webcoleta.util.GarbageConstants;
 import com.example.anderson.webcoleta.util.WebService;
 
-import java.util.ArrayList;
-
 public class SearchActivity extends AppCompatActivity {
 
     private GarbagePlacesAdapter mGarbagePlacesAdapter;
     private ListView mListGarbagePlaces;
-    private GarbagePlace[] mGarbagePlacles;
+    private GarbagePlace[] mGarbagePlaces;
     private ProgressDialog mProgress;
     private String letra = "";
-    private int check = 0;
 
 
     Spinner spinnerS;
@@ -50,6 +46,8 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
+        TextView t = (TextView)findViewById(R.id.textView1);
+        t.requestFocus();
 
         spinnerT = (Spinner)findViewById(R.id.spinner1);
         ArrayAdapter<String> adapterT = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, itensTurno);
@@ -67,7 +65,7 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                if(++check > 1) {
+
                     if(position == 0) {
                         Toast.makeText(SearchActivity.this, "Escolha um elemento válido: ", Toast.LENGTH_SHORT).show();
                         return;
@@ -79,7 +77,7 @@ public class SearchActivity extends AppCompatActivity {
                         mListGarbagePlaces.setEmptyView(findViewById(android.R.id.empty));
                         new SyncDataTask().execute();
 
-                }
+
             }
 
 
@@ -91,7 +89,7 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                if(++check > 1) {
+
                     if(position == 0) {
                         Toast.makeText(SearchActivity.this, "Escolha um elemento válido: ", Toast.LENGTH_SHORT).show();
                         return;
@@ -103,7 +101,7 @@ public class SearchActivity extends AppCompatActivity {
                         mListGarbagePlaces.setEmptyView(findViewById(android.R.id.empty));
                         new SyncDataTask().execute();
                     }
-                }
+
             }
 
             @Override
@@ -117,7 +115,7 @@ public class SearchActivity extends AppCompatActivity {
     private void loadData() {
 
         WebService service = new WebService();
-        mGarbagePlacles = service.readSetorGarbagePlaces(letra);
+        mGarbagePlaces = service.readSetorGarbagePlaces(letra);
 
     }
 
@@ -125,7 +123,7 @@ public class SearchActivity extends AppCompatActivity {
         //init adapter
 
 
-        mGarbagePlacesAdapter = new GarbagePlacesAdapter(this, mGarbagePlacles);
+        mGarbagePlacesAdapter = new GarbagePlacesAdapter(this, mGarbagePlaces);
 
         mListGarbagePlaces.setAdapter(mGarbagePlacesAdapter);
 
@@ -146,13 +144,13 @@ public class SearchActivity extends AppCompatActivity {
 
 
         // para setar todos os GarbagePlaces serem true para autoCompTextView
-        for(GarbagePlace place : mGarbagePlacles) {
+        for(GarbagePlace place : mGarbagePlaces) {
             place.setAutoComp(true);
         }
 
         // Não pode ficar no OnCreat pq aqui é onde de fato a lista está populada
         ArrayAdapter<GarbagePlace> adapterBusca = new ArrayAdapter<GarbagePlace>
-                (this, android.R.layout.simple_dropdown_item_1line, mGarbagePlacles);
+                (this, android.R.layout.simple_dropdown_item_1line, mGarbagePlaces);
         AutoCompleteTextView busca = (AutoCompleteTextView) findViewById(R.id.pesquisa);
         busca.setAdapter(adapterBusca);
 

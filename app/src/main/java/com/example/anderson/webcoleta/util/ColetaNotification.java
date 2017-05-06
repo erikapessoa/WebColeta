@@ -44,7 +44,7 @@ public class ColetaNotification {
 
         NotificationCompat.Builder mBuilder =
                 (NotificationCompat.Builder) new NotificationCompat.Builder(mContext)
-                        .setSmallIcon(android.R.mipmap.sym_def_app_icon)
+                        .setSmallIcon(R.mipmap.ic_webcoleta)
                         .setContentTitle(mContext.getString(R.string.app_name))
                         .setContentText(mContext.getString(R.string.notification_alert));
 

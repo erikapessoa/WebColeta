@@ -21,7 +21,6 @@ import com.example.anderson.webcoleta.util.SavePreferences;
 import java.util.Calendar;
 
 public class RegisterNotificationActivity extends AppCompatActivity {
-    Intent it;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +31,7 @@ public class RegisterNotificationActivity extends AppCompatActivity {
     //cadastrar as preferências (tempo de antecedência do aviso
     public void savePreferences(View v) {
 
-
-
-
-
+        Intent it;
         RadioGroup mRadioGroup = null;
         GarbagePlace place = null;
         RadioButton radio = null;
@@ -66,18 +62,13 @@ public class RegisterNotificationActivity extends AppCompatActivity {
         savePrefs.savePreference(GarbageConstants.sKey_Frequency, place.getFrequency());
         savePrefs.savePreference(GarbageConstants.sKey_Interval, place.getInterval());
 
-        //registrando a notificação
-        //horário que a notificação será criada
+        //registrando a notificação, horário que a notificação será criada
         calendar = createDate(place, time);
         notificationSchedule(calendar);
-
 
         it.putExtra("RESULT_OK", 1);
         setResult(1,it);
         finish();
-
-        //mensagem para o usuário
-        //Toast.makeText(RegisterNotificationActivity.this, R.string.rn_msg_sucess, Toast.LENGTH_SHORT).show();
 
         //Log.i("RegisterActivity", savePrefs.getPreference(GarbageConstants.sKey_Interval));
     }
@@ -139,14 +130,6 @@ public class RegisterNotificationActivity extends AppCompatActivity {
         //para que o alarme avise com a antecedência escolhida pelo usuário
         calendar.add(Calendar.MINUTE, tb);
 
-        /*
-        Log.i("RegisterActivity", calendar.toString());
-        Log.i("RegisterActivity", "Mês=" + String.valueOf(calendar.get(Calendar.MONTH)));
-        Log.i("RegisterActivity", "Dia=" + String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)));
-        Log.i("RegisterActivity", "Hora=" + String.valueOf(calendar.get(Calendar.HOUR)));
-        Log.i("RegisterActivity", "Hora do dia =" + String.valueOf(calendar.get(Calendar.HOUR_OF_DAY)));
-        Log.i("RegisterActivity", "Minuto =" + String.valueOf(calendar.get(Calendar.MINUTE)));
-        */
         return calendar;
 
     }

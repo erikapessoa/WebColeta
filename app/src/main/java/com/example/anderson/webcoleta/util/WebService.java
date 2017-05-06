@@ -82,7 +82,7 @@ public class WebService  {
 
             } else {
                 mGarbagePlacles = null;
-                LogWrapper.log("Erro HTTP " + connection.getResponseCode());
+                Log.i("WebService","Erro HTTP " + connection.getResponseCode() );
                 //  Snackbar.make(mListPlaces, getString(R.string.connection_exception), Snackbar.LENGTH_LONG).show();
             }
 
@@ -160,7 +160,7 @@ public class WebService  {
 
             } else {
                 mGarbagePlacles = null;
-                LogWrapper.log("Erro HTTP " + connection.getResponseCode());
+                Log.i("WebService","Erro HTTP " + connection.getResponseCode());
                 //  Snackbar.make(mListPlaces, getString(R.string.connection_exception), Snackbar.LENGTH_LONG).show();
             }
         } catch (IOException e2) {

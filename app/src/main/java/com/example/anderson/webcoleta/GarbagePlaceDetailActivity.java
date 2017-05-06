@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -71,25 +72,14 @@ public class GarbagePlaceDetailActivity extends AppCompatActivity implements OnM
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode==1)
-        {
+        if (requestCode == 1) {
             register.setEnabled(false);
             register.setVisibility(View.GONE);
             cancelRegister.setEnabled(false);
             cancelRegister.setVisibility(View.GONE);
-            registered.setText("Você está registrado nesta coleta!");
-
-
+            registered.setText(R.string.rn_msg_sucess);
         }
-
-       /* if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            Intent intent = new Intent(this, PictureActivity.class);
-            intent.putExtras(data.getExtras());
-            startActivity(intent);*/
     }
-
-
-
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
